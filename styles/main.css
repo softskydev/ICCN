@@ -351,6 +351,22 @@ section .section-title h2:after { content: ""; width: 5.625rem; height: 1px; bac
 
 .section.post-tips { background: #FAFAFA; }
 
+.masthead-small { position: relative; min-height: 32.1875rem; }
+
+.masthead-small .masthead-bg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; background-attachment: fixed; background-position: top; background-repeat: no-repeat; background-size: auto; }
+
+.masthead-small .masthead-text { position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #FFF; }
+
+.masthead-small .masthead-text:after { content: ""; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.3); }
+
+.masthead-small .masthead-text h1 { color: #FFF; margin-bottom: 0rem; font-size: 3.125rem; line-height: 3.75rem; font-family: "Montserrat Semibold", sans-serif; font-weight: 600; }
+
+.masthead-small .masthead-text .container { height: 100%; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; padding-bottom: 5rem; display: -webkit-flex; display: -ms-flexbox; display: flex; position: relative; z-index: 4; }
+
+.masthead-small .masthead-text .container .row { width: 100%; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
+
+.masthead-small .masthead-date { font-size: 1.25rem; line-height: 1.5rem; text-align: right; display: block; }
+
 .banner__small { padding: 40px 0; padding-top: 0; }
 
 .banner__small .container > .row { -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
@@ -952,9 +968,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 /* ------------------------------------------------------------------------------------------------ */
 .home-masthead { min-height: 55.5rem; position: relative; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
-.home-masthead .masthead-bg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-
-.home-masthead .masthead-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; position: absolute; top: 0; left: 0; }
+.home-masthead .masthead-bg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
 
 .home-masthead .masthead-content { color: #fff; }
 
@@ -1071,6 +1085,40 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 .home-sponsorship .sponsor-logos:not(:last-child) { margin-bottom: 3.125rem; }
 
 .home-sponsorship .sponsor-logos img { max-height: 6.6875rem; }
+
+.about-desc { padding: 7.5rem 0; }
+
+.about-desc h2 { font-size: 1.5rem; line-height: 2.75rem; font-family: "Montserrat Medium", sans-serif; font-weight: 500; margin-bottom: 1.25rem; }
+
+.about-committee { padding: 7.5rem 0; background: #EEEEEE; }
+
+.about-committee .committee-card { padding: 1.875rem; background: #FFF; border-radius: 30px; margin-bottom: 1.25rem; }
+
+.about-committee .committee-card h3 { font-size: 1.5rem; line-height: 2.75rem; font-family: "Montserrat Medium", sans-serif; font-weight: 500; margin-bottom: 10px; text-transform: uppercase; }
+
+.about-committee .committee-card ul { padding-left: 1.875rem; }
+
+.about-committee .committee-card ul li { position: relative; color: #000000; }
+
+.about-committee .committee-card ul li:before { content: ""; width: 4px; height: 4px; border-radius: 50px; position: absolute; top: 10px; left: -20px; background: #000; }
+
+.about-committee .committee-card ul li:not(:last-child) { margin-bottom: 10px; }
+
+.about-committee .committee-card ul li .position { color: #3B4676; display: block; }
+
+.about-contact { padding: 7.5rem 0; }
+
+.about-contact .contact-card { padding: 1.875rem; background: #FFF; border-radius: 30px; margin-bottom: 1.25rem; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); height: 100%; color: #727272; }
+
+.about-contact .contact-card h3 { font-size: 1.5rem; line-height: 2.75rem; font-family: "Montserrat Medium", sans-serif; font-weight: 500; margin-bottom: 30px; text-transform: uppercase; }
+
+.about-contact .contact-card span { padding-right: 0.625rem; }
+
+.about-contact .contact-card a { color: #727272; }
+
+.about-contact .contact-card ul { padding-left: 0; }
+
+.about-contact .contact-card ul li ul { padding-left: 3.5625rem; }
 
 .section.blog-content { padding-top: 60px; padding-bottom: 60px; background-color: #fff; overflow-x: hidden; }
 
