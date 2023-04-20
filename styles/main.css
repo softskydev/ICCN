@@ -251,6 +251,8 @@ button.close { padding: 0; background-color: transparent; border: 0; -webkit-app
 
 ul { list-style: none; margin-bottom: 0; }
 
+.disabled { opacity: .5; pointer-events: none; }
+
 section .section-title h2 { text-align: center; position: relative; }
 
 section .section-title h2:after { content: ""; width: 5.625rem; height: 1px; background: #000000; position: absolute; top: calc(100% + 19px); left: 0; right: 0; margin: 0 auto; }
@@ -938,11 +940,28 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .header-nav .nav-item a:hover { text-decoration: none; }
 
-.header-nav .nav-item:hover:before, .header-nav .nav-item.active:before { content: ""; width: 100%; height: 1px; background: #FFF; position: absolute; left: 0; top: 100%; }
+.header-nav > .nav-item:hover:before, .header-nav > .nav-item.active:before { content: ""; width: 100%; height: 1px; background: #FFF; position: absolute; left: 0; top: 100%; }
 
-.header-nav .nav-item.has-sub { position: relative; padding-right: 2rem; }
+.header-nav > .nav-item.has-sub { position: relative; padding-right: 2rem; }
 
-.header-nav .nav-item.has-sub:after { content: ""; position: absolute; top: calc(50% - 5px); right: 0; border-style: solid; height: 0; width: 0; border-color: #FFF transparent transparent; border-width: 9px 7px 0; }
+.header-nav > .nav-item.has-sub:after { content: ""; position: absolute; top: calc(50% - 5px); right: 0; border-style: solid; height: 0; width: 0; border-color: #FFF transparent transparent; border-width: 9px 7px 0; }
+
+@media (min-width: 1301px) { .header-nav > .nav-item.has-sub:hover .sub-menu { top: calc(100% + 15px); opacity: 1; visibility: visible; } }
+
+.header-nav > .nav-item.has-sub .sub-menu { position: absolute; top: 0; left: 0; right: 0; margin: 0 auto; min-width: 15rem; width: -webkit-max-content; width: -moz-max-content; width: max-content; background: #FFF; padding: 1.5rem 1rem; border-radius: 16px; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); opacity: 0; visibility: hidden; transition: all .3s linear; }
+
+.header-nav > .nav-item.has-sub .sub-menu:before { content: ""; width: 100%; height: 1.25rem; position: absolute; bottom: 100%; left: 0; }
+
+.header-nav > .nav-item.has-sub .sub-menu .nav-item a { color: #0083CB; transition: all .3s ease-in-out; }
+
+.header-nav > .nav-item.has-sub .sub-menu .nav-item a:hover { opacity: .8; }
+
+@media (max-width: 1300px) { .header-nav > .nav-item.has-sub:after { display: none; }
+  .header-nav > .nav-item.has-sub > a { position: relative; max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; }
+  .header-nav > .nav-item.has-sub > a:after { content: ""; position: absolute; top: 5px; left: calc(100% + 10px); border-style: solid; height: 0; width: 0; border-color: #0083CB transparent transparent; border-width: 9px 7px 0; }
+  .header-nav > .nav-item.has-sub .sub-menu { padding: 0; background: transparent; box-shadow: none; }
+  .header-nav > .nav-item.has-sub.sm-opened .sub-menu { position: relative; visibility: visible; opacity: 1; margin-top: 1rem; }
+  .header-nav > .nav-item.has-sub.sm-opened .sub-menu .nav-item:not(:last-child) { margin-bottom: 0; } }
 
 .header.sticky { background: #FFF; }
 
@@ -1055,7 +1074,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-welcome { padding: 7.5rem 0; background: #FFF; }
 
-.home-welcome .welcome-card { height: 100%; padding: 3.125rem 2.8125rem; background: #FFF; border-radius: 30px; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); }
+.home-welcome .welcome-card { height: 100%; padding: 3.125rem 2.8125rem; background: #FFF; border-radius: 30px; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
 .home-welcome .welcome-card .profile { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; margin-bottom: 3.125rem; }
 
@@ -1074,6 +1093,8 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 .home-welcome .welcome-card .welcome-text p { display: -webkit-box; -webkit-line-clamp: 6; overflow: hidden; text-overflow: ellipsis; }
 
 .home-welcome .welcome-card .welcome-text .btn { display: block; max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
+
+.home-welcome .welcome-card .profile-logo { margin-top: auto; }
 
 .home-welcome .welcome-card .profile-logo img { display: block; width: auto; max-height: 7.125rem; margin: auto; }
 
@@ -1121,7 +1142,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-regis .regis-coups .coupon-type span { font-family: "Montserrat Semibold", sans-serif; font-weight: 600; color: #0083CB; font-size: 1.5625rem; line-height: 2.75rem; }
 
-.home-timeline .timeline-card { padding: 3.125rem; border-radius: 30px; background: #3B4676; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); color: #FFF; }
+.home-timeline .timeline-card { padding: 3.125rem; border-radius: 30px; background: #3B4676; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); color: #FFF; height: 100%; }
 
 .home-timeline .timeline-card h3 { color: #FFF; font-size: 1.875rem; line-height: 2.0625rem; margin-bottom: 2rem; font-family: "Montserrat Medium", sans-serif; font-weight: 500; }
 
@@ -1178,6 +1199,32 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
   .home-timeline .btn-wrap .btn + .btn { margin-left: 0 !important; }
   .home-timeline .btn-wrap .btn:not(:last-child) { margin-bottom: 1rem; }
   .home-sponsorship .sponsor-logos .col { -webkit-flex: 0 0 50%; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; margin-bottom: 1rem; } }
+
+.modalWelcome .btn-close { position: absolute; top: 2rem; right: 2rem; z-index: 5; }
+
+.modalWelcome .btn-close:hover { cursor: pointer; }
+
+.modalWelcome .welcome-card { height: 100%; }
+
+.modalWelcome .welcome-card .profile { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; margin-bottom: 2rem; }
+
+.modalWelcome .welcome-card .profile .pp { -webkit-flex: 0 0 6.25rem; -ms-flex: 0 0 6.25rem; flex: 0 0 6.25rem; max-width: 6.25rem; height: 6.25rem; border-radius: 100px; position: relative; overflow: hidden; }
+
+.modalWelcome .welcome-card .profile .pp img { width: 100%; height: 100%; object-fit: cover; object-position: center; position: absolute; top: 0; left: 0; }
+
+.modalWelcome .welcome-card .profile .pname { -webkit-flex: 0 0 calc(100% - 6.25rem); -ms-flex: 0 0 calc(100% - 6.25rem); flex: 0 0 calc(100% - 6.25rem); max-width: calc(100% - 6.25rem); padding-left: 1.25rem; }
+
+.modalWelcome .welcome-card .profile .pname b { display: block; color: #000000; margin-bottom: 0.625rem; }
+
+.modalWelcome .welcome-card .profile .pname span { font-style: italic; font-weight: 300; color: #000000; opacity: .8; }
+
+.modalWelcome .welcome-card .welcome-text { color: #727272; margin-bottom: 3.125rem; }
+
+.modalWelcome .welcome-card .welcome-text p { font-size: 1rem; line-height: 1.5em; }
+
+.modalWelcome .welcome-card .welcome-text .btn { display: block; max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
+
+.modalWelcome .welcome-card .profile-logo img { display: block; width: auto; max-height: 7.125rem; margin: auto; }
 
 .about-desc { padding: 7.5rem 0; }
 
