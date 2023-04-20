@@ -99,7 +99,7 @@ hr { border-top: 1px solid #757575; }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 
-html, body { font-size: 16px; line-height: 24px; font-family: 'Roboto', arial, sans-serif; font-weight: 400; padding: 0; margin: 0; background-color: #FFFFFF; color: #727272; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+html, body { font-size: 14px; line-height: 21px; font-family: 'Roboto', arial, sans-serif; font-weight: 400; padding: 0; margin: 0; background-color: #FFFFFF; color: #727272; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* Component style */
@@ -239,7 +239,11 @@ button.close { padding: 0; background-color: transparent; border: 0; -webkit-app
 /* ------------------------------------------------------------------------------------------------ */
 /* General */
 /* ------------------------------------------------------------------------------------------------ */
-.container { max-width: 79.792vw; }
+.container { max-width: 79.688vw; }
+
+@media (max-width: 1600px) { .container { max-width: 90vw; } }
+
+@media (max-width: 767px) { .container { max-width: 100%; } }
 
 .row { margin-left: -12px; margin-right: -12px; }
 
@@ -250,6 +254,11 @@ ul { list-style: none; margin-bottom: 0; }
 section .section-title h2 { text-align: center; position: relative; }
 
 section .section-title h2:after { content: ""; width: 5.625rem; height: 1px; background: #000000; position: absolute; top: calc(100% + 19px); left: 0; right: 0; margin: 0 auto; }
+
+@media (max-width: 991px) { section:not(.home-masthead):not(.masthead-small) { padding: 3.75rem 0 !important; }
+  section .section-title h2 { font-size: 1.75rem; line-height: 1.3em; } }
+
+@media (max-width: 767px) { section:not(.home-masthead):not(.masthead-small) { padding: 2.5rem 0; } }
 
 .btn { padding: 0.75rem 2.375rem; border-radius: 50px; display: inline-block; text-decoration: none; font-size: 16px; line-height: 24px; transition: all .3s ease; }
 
@@ -270,6 +279,8 @@ section .section-title h2:after { content: ""; width: 5.625rem; height: 1px; bac
 .btn-large { padding: 1.25rem 3.125rem; }
 
 .btn-long { width: 23rem; text-align: center; }
+
+@media (max-width: 991px) { .btn-long { width: 100%; } }
 
 .aksen-1 { position: absolute; top: 0; left: 0; width: 200px; height: 200px; background-image: url(../images/aksen-home-banner.svg); background-size: contain; background-position: center; background-repeat: no-repeat; }
 
@@ -366,6 +377,9 @@ section .section-title h2:after { content: ""; width: 5.625rem; height: 1px; bac
 .masthead-small .masthead-text .container .row { width: 100%; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 
 .masthead-small .masthead-date { font-size: 1.25rem; line-height: 1.5rem; text-align: right; display: block; }
+
+@media (max-width: 767px) { .masthead-small .masthead-text h1 { font-size: 36px; line-height: 1.3em; }
+  .masthead-small .masthead-text h1 br { display: none; } }
 
 .banner__small { padding: 40px 0; padding-top: 0; }
 
@@ -904,7 +918,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .header-wrap { transition: all .3s linear; width: 100%; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-items: center; -ms-flex-align: center; align-items: center; padding-top: 1.5rem; padding-bottom: 0.875rem; }
 
-.header-left { -webkit-flex: 0 0 20%; -ms-flex: 0 0 20%; flex: 0 0 20%; max-width: 20%; }
+.header-left { -webkit-flex: 0 0 16%; -ms-flex: 0 0 16%; flex: 0 0 16%; max-width: 16%; }
 
 .header-logo { transition: all .3s linear; }
 
@@ -912,9 +926,11 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .header-logo img.colored { display: none; }
 
-.header-right { -webkit-flex: 0 0 80%; -ms-flex: 0 0 80%; flex: 0 0 80%; max-width: 80%; }
+@media (max-width: 767px) { .header-logo img { height: auto; max-width: 100px; } }
 
-.header-nav { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; gap: 1.25rem; }
+.header-right { -webkit-flex: 0 0 84%; -ms-flex: 0 0 84%; flex: 0 0 84%; max-width: 84%; }
+
+.header-nav { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; gap: 1rem; }
 
 .header-nav .nav-item { transition: all .3s ease-in-out; position: relative; padding: 0.625rem; }
 
@@ -944,6 +960,40 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .header.sticky .header-nav .nav-item:hover:before, .header.sticky .header-nav .nav-item.active:before { background: #0083CB; }
 
+@media (min-width: 992px) { .header .burger-menu { display: none; } }
+
+@media (max-width: 991px) { .burger-menu { width: 2rem; margin: 0 auto; cursor: pointer; height: 2rem; z-index: 5; transition: .25s ease-in-out; transition-delay: .25s; position: absolute; z-index: 99; top: calc(50% - 1rem); right: 2rem; }
+  .burger-menu span { display: block; position: absolute; height: 2px; width: 2rem; background: #FFF; border-radius: 20px; opacity: 1; left: 0; transition: all .4s ease; }
+  .burger-menu span:nth-child(1) { top: 0.3125rem; }
+  .burger-menu span:nth-child(2) { top: 0.9375rem; }
+  .burger-menu span:nth-child(3) { top: 1.5625rem; }
+  .header-wrap { padding: 1rem 0; }
+  .header-right { position: fixed; top: 6.25rem; left: 0; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; width: 100%; background: #FFF; display: block; padding: 0 1.25rem; max-height: 0; opacity: 0; visibility: hidden; }
+  .header-nav { display: block; padding-top: 2rem; }
+  .header-nav .nav-item { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; }
+  .header-nav .nav-item a { color: #0083CB; }
+  .header-nav .nav-item:not(:last-child) { margin-bottom: 1.25rem; }
+  .header-nav .nav-item.has-sub:after { border-style: solid; height: 0; width: 0; border-color: #0083CB transparent transparent; border-width: 9px 7px 0; }
+  .header.sticky .burger-menu span { background: #0083CB; }
+  .header.sticky .header-logo img:not(.colored) { display: none; }
+  .header.sticky .header-logo img.colored { display: block; }
+  .header.sticky .header-right { top: 4.375rem; }
+  body.main-menu-open { height: 100vh; overflow: hidden; }
+  body.main-menu-open::after { opacity: 1; visibility: visible; }
+  body.main-menu-open .header { background: #FFF; }
+  body.main-menu-open .header-logo img:not(.colored) { display: none; }
+  body.main-menu-open .header-logo img.colored { display: block; }
+  body.main-menu-open .header-right { max-height: calc(100vh - 60px); height: calc(100vh - 60px); opacity: 1; visibility: visible; }
+  body.main-menu-open .header-nav { padding-left: 3.25rem; } }
+
+@media (max-width: 991px) and (max-width: 767px) { body.main-menu-open .header-nav { padding-left: 0; } }
+
+@media (max-width: 991px) { body.main-menu-open .burger-menu { top: 2rem; }
+  body.main-menu-open .burger-menu span { background: #0083CB; }
+  body.main-menu-open .burger-menu span:nth-child(1) { top: 6px; width: 100%; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+  body.main-menu-open .burger-menu span:nth-child(2) { top: 6px; width: 100%; opacity: 0; }
+  body.main-menu-open .burger-menu span:nth-child(3) { top: 6px; width: 100%; -webkit-transform: rotate(135deg); transform: rotate(135deg); } }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* Footer */
 /* ------------------------------------------------------------------------------------------------ */
@@ -968,6 +1018,11 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 .footer-socmed a img { width: 100%; height: 100%; object-fit: contain; }
 
 .footer-socmed a:hover { -webkit-transform: translateY(-0.625rem); transform: translateY(-0.625rem); }
+
+@media (max-width: 767px) { .footer { text-align: center; }
+  .footer .col-lg-6 { margin-bottom: 1.5rem; }
+  .footer-right { text-align: center; }
+  .footer-socmed { -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; } }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* Content */
@@ -1044,7 +1099,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-regis { padding: 7.5rem 0; background: #FFF; }
 
-.home-regis .regis-box { width: 100%; padding: 3.125rem 5rem 5rem; background: #FFF; border-radius: 30px; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); }
+.home-regis .regis-box { width: 100%; padding: 2.5rem 3.75rem 3.75rem; background: #FFF; border-radius: 30px; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); }
 
 .home-regis .regis-box .btn-long { display: block; margin: 0 auto; }
 
@@ -1052,13 +1107,13 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-regis .regis-desc { max-width: 47rem; margin: 0 auto 3.125rem; text-align: center; }
 
-.home-regis .regis-coups { padding: 5.9375rem 0; margin-bottom: 3.125rem; background-size: cover; background-position: center; border-radius: 20px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; gap: 20px; }
+.home-regis .regis-coups { padding: 5.9375rem 0; margin-bottom: 3.125rem; background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 20px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; gap: 20px; }
 
 .home-regis .regis-coups .coupon { padding: 1.25rem 3.125rem; background: #FFF; border-radius: 20px; }
 
 .home-regis .regis-coups .coupon h3 { font-family: "Montserrat Medium", sans-serif; font-weight: 500; font-size: 1.25rem; line-height: 2.75rem; margin-bottom: 0.625rem; color: #0083CB; text-align: center; }
 
-.home-regis .regis-coups .coupon-type { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.home-regis .regis-coups .coupon-type { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
 
 .home-regis .regis-coups .coupon-type .icon { width: 2.1875rem; height: 2.1875rem; margin-right: 1.25rem; }
 
@@ -1072,7 +1127,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-timeline .timeline-card ul { padding-left: 0; margin-bottom: 1.875rem; }
 
-.home-timeline .timeline-card ul li { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: relative; font-size: 1.5rem; line-height: 2.25rem; }
+.home-timeline .timeline-card ul li { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: relative; font-size: 1.125rem; line-height: 2rem; }
 
 .home-timeline .timeline-card ul li:not(:last-child) { margin-bottom: 0.5rem; }
 
@@ -1091,6 +1146,38 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 .home-sponsorship .sponsor-logos:not(:last-child) { margin-bottom: 3.125rem; }
 
 .home-sponsorship .sponsor-logos img { max-height: 6.6875rem; }
+
+@media (max-width: 991px) { .home-masthead .countdown-counter { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .home-welcome .welcom-card { box-shadow: none; }
+  .home-welcome .slider-md { box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); }
+  .home-regis .regis-coups { display: block; }
+  .home-regis .regis-coups .coupon { max-width: 80%; margin: 0 auto; }
+  .home-regis .regis-coups .coupon:not(:last-child) { margin-bottom: 1.5rem; }
+  .home-timeline .col-lg-6 { margin-bottom: 1.5rem; }
+  .home-sponsorship .sponsor-logos { gap: 0; }
+  .home-sponsorship .sponsor-logos .col { -webkit-flex: 0 0 33.333333%; -ms-flex: 0 0 33.333333%; flex: 0 0 33.333333%; max-width: 33.333333%; margin-bottom: 1rem; }
+  .home-sponsorship .sponsor-logos .col img { max-height: 2.5rem; } }
+
+@media (max-width: 767px) { .home-masthead { min-height: 50rem; }
+  .home-masthead h1 { font-size: 32px; line-height: 1.3em; }
+  .home-masthead h1 br { display: none; }
+  .home-masthead .masthead-content .countdown-counter .cd { margin-bottom: 1.25rem; }
+  .home-welcome .slider-md { margin-left: 0; margin-right: 0; border-radius: 30px; padding-bottom: 3.75rem; }
+  .home-welcome .slider-md .owl-dots { margin-top: 0rem; position: absolute; left: 0; right: 0; bottom: -1.875rem; margin: 0 auto; }
+  .home-welcome .welcome-card { box-shadow: none !important; }
+  .home-glance .glance-title br { display: none; }
+  .home-glance .glance-dateloc { display: block; }
+  .home-glance .glance-dateloc .item { max-width: 100%; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; flex: 0 0 100%; }
+  .home-glance .glance-dateloc .item:not(:last-child) { margin-bottom: 1rem; }
+  .home-glance .glance-dateloc .item .icon { width: 1.5rem; height: 1.5rem; }
+  .home-regis .regis-box { padding: 2rem; }
+  .home-regis .regis-coups { padding: 2rem 0; }
+  .home-regis .regis-coups .coupon { padding: 1rem; }
+  .home-regis .regis-coups .coupon .coupon-type span { font-size: 1.125rem; line-height: 1.2em; }
+  .home-timeline .btn-wrap .btn { width: 100%; text-align: center; }
+  .home-timeline .btn-wrap .btn + .btn { margin-left: 0 !important; }
+  .home-timeline .btn-wrap .btn:not(:last-child) { margin-bottom: 1rem; }
+  .home-sponsorship .sponsor-logos .col { -webkit-flex: 0 0 50%; -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%; margin-bottom: 1rem; } }
 
 .about-desc { padding: 7.5rem 0; }
 
@@ -1125,6 +1212,8 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 .about-contact .contact-card ul { padding-left: 0; }
 
 .about-contact .contact-card ul li ul { padding-left: 3.5625rem; }
+
+@media (max-width: 767px) { .about-contact .contact-wrap .col-md-6 { margin-bottom: 1.5rem; } }
 
 .section.blog-content { padding-top: 60px; padding-bottom: 60px; background-color: #fff; overflow-x: hidden; }
 
