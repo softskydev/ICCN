@@ -262,6 +262,8 @@ section .section-title h2:after { content: ""; width: 5.625rem; height: 1px; bac
 
 @media (max-width: 767px) { section:not(.home-masthead):not(.masthead-small) { padding: 2.5rem 0; } }
 
+.bg-gray { background: #EEEEEE; }
+
 .btn { padding: 0.75rem 2.375rem; border-radius: 50px; display: inline-block; text-decoration: none; font-size: 16px; line-height: 24px; transition: all .3s ease; }
 
 .btn:hover { text-decoration: none; color: #727272; }
@@ -1230,7 +1232,13 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .about-desc h2 { font-size: 1.5rem; line-height: 2.75rem; font-family: "Montserrat Medium", sans-serif; font-weight: 500; margin-bottom: 1.25rem; }
 
-.about-committee { padding: 7.5rem 0; background: #EEEEEE; }
+.about-desc article:not(:last-child) { margin-bottom: 3.75rem; }
+
+.about-desc .box-img { width: 100%; height: auto; max-height: 35.6875rem; }
+
+.about-desc .box-img img { border-radius: 20px; }
+
+.about-committee { padding: 7.5rem 0; }
 
 .about-committee .committee-card { padding: 1.875rem; background: #FFF; border-radius: 30px; margin-bottom: 1.25rem; }
 
@@ -1246,6 +1254,26 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .about-committee .committee-card ul li .position { color: #3B4676; display: block; }
 
+.about-committee .committee-cardblue { padding: 2.5rem; border-radius: 20px; background: #3B4676; color: #FFF; }
+
+.about-committee .committee-cardblue:not(:last-child) { margin-bottom: 0.625rem; }
+
+.about-committee .committee-cardblue .icon { width: 3.125rem; height: 3.125rem; display: inline-block; vertical-align: middle; margin-right: 1.875rem; }
+
+.about-committee .committee-cardblue .icon img { width: 100%; height: 100%; }
+
+.about-committee .committee-cardblue h3 { font-family: "Montserrat Medium", sans-serif; font-weight: 500; display: inline-block; vertical-align: middle; color: #FFF; margin-bottom: 0; text-transform: uppercase; }
+
+.about-committee .committee-cardblue ul { padding-left: 1.875rem; }
+
+.about-committee .committee-cardblue ul li { position: relative; }
+
+.about-committee .committee-cardblue ul li:before { content: ""; width: 4px; height: 4px; border-radius: 50px; position: absolute; top: 10px; left: -20px; background: #FFF; }
+
+.about-committee .committee-cardblue ul li:not(:last-child) { margin-bottom: 10px; }
+
+.about-committee .committee-cardblue ul li .position { color: #FFF; display: block; }
+
 .about-contact { padding: 7.5rem 0; }
 
 .about-contact .contact-card { padding: 1.875rem; background: #FFF; border-radius: 30px; margin-bottom: 1.25rem; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); height: 100%; color: #727272; }
@@ -1259,6 +1287,28 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 .about-contact .contact-card ul { padding-left: 0; }
 
 .about-contact .contact-card ul li ul { padding-left: 3.5625rem; }
+
+.about-chapoverview { padding: 7.5rem 0; background: #EEEEEE; }
+
+.about-chapoverview > .container > .row:last-child { margin-top: 7.5rem; }
+
+.about-chapoverview .box-img { width: 100%; margin-bottom: 3.125rem; }
+
+.about-chapoverview .box-img img { width: 100%; height: auto; max-height: 36.4375rem; }
+
+.about-chapoverview .box-legend { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; gap: 5rem; }
+
+.about-chapoverview .box-legend .item { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.about-chapoverview .box-legend .item .b-color { width: 2.1875rem; height: 2.1875rem; border-radius: 10px; margin-right: 0.625rem; }
+
+.about-chapoverview .box-legend .item span { font-family: "Montserrat Bold", sans-serif; font-weight: 700; color: #000; }
+
+.about-chapoverview .box-member { padding: 1.875rem; background: #FFF; border-radius: 30px; text-align: center; max-width: 24.25rem; }
+
+.about-chapoverview .box-member h3 { margin-bottom: 0; font-size: 1.625rem; line-height: 1.5em; font-family: "Montserrat Medium", sans-serif; font-weight: 500; text-transform: uppercase; }
+
+.about-chapoverview article { margin-bottom: 3.125rem; }
 
 @media (max-width: 767px) { .about-contact .contact-wrap .col-md-6 { margin-bottom: 1.5rem; } }
 
