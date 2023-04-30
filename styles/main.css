@@ -46,6 +46,10 @@ article p { word-break: keep-all; /* Non standard for webkit */ -webkit-hyphens:
 
 article p:last-child { margin: 0; }
 
+article p.upper { text-transform: uppercase; }
+
+article p.big { font-size: 1.25rem; line-height: 1.875rem; }
+
 article a:hover { text-decoration: underline; }
 
 article blockquote { font-style: italic; }
@@ -1254,7 +1258,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .about-committee .committee-card ul li .position { color: #3B4676; display: block; }
 
-.about-committee .committee-cardblue { padding: 2.5rem; border-radius: 20px; background: #3B4676; color: #FFF; }
+.about-committee .committee-cardblue { padding: 2.5rem; border-radius: 20px; background: #EEEEEE; color: #333333; }
 
 .about-committee .committee-cardblue:not(:last-child) { margin-bottom: 0.625rem; }
 
@@ -1262,17 +1266,17 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .about-committee .committee-cardblue .icon img { width: 100%; height: 100%; }
 
-.about-committee .committee-cardblue h3 { font-family: "Montserrat Medium", sans-serif; font-weight: 500; display: inline-block; vertical-align: middle; color: #FFF; margin-bottom: 0; text-transform: uppercase; }
+.about-committee .committee-cardblue h3 { font-family: "Montserrat Medium", sans-serif; font-weight: 500; display: inline-block; vertical-align: middle; color: #3B4676; margin-bottom: 0; text-transform: uppercase; }
 
 .about-committee .committee-cardblue ul { padding-left: 1.875rem; }
 
 .about-committee .committee-cardblue ul li { position: relative; }
 
-.about-committee .committee-cardblue ul li:before { content: ""; width: 4px; height: 4px; border-radius: 50px; position: absolute; top: 10px; left: -20px; background: #FFF; }
+.about-committee .committee-cardblue ul li:before { content: ""; width: 4px; height: 4px; border-radius: 50px; position: absolute; top: 10px; left: -20px; background: #333333; }
 
 .about-committee .committee-cardblue ul li:not(:last-child) { margin-bottom: 10px; }
 
-.about-committee .committee-cardblue ul li .position { color: #FFF; display: block; }
+.about-committee .committee-cardblue ul li .position { color: #333333; display: block; }
 
 .about-contact { padding: 7.5rem 0; }
 
