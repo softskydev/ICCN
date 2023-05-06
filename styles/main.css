@@ -1335,6 +1335,8 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .abstract-content { padding: 7.5rem 0; }
 
+.abstract-content .dropdown.dropdown-nav { display: none; }
+
 .abstract-side ul { max-width: 18.75rem; padding: 0; list-style: none; }
 
 .abstract-side ul li:not(:last-child) { margin-bottom: 0.625rem; }
