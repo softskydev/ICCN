@@ -265,6 +265,10 @@ ul { padding-left: 1.5rem; }
 
 .disabled { opacity: .5; pointer-events: none; }
 
+.sticky { transition: all .3s ease-in-out; }
+
+section .section-title { padding-bottom: 1.25rem; margin-bottom: 2.5rem; }
+
 section .section-title h2 { text-align: center; position: relative; }
 
 section .section-title h2:after { content: ""; width: 5.625rem; height: 1px; background: #000000; position: absolute; top: calc(100% + 19px); left: 0; right: 0; margin: 0 auto; }
@@ -1149,6 +1153,12 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-glance .glance-description { max-width: 37.5rem; margin: 0 auto; font-size: 1.25rem; line-height: 1.875rem; color: #333; text-align: center; }
 
+.home-glance .video-glance { position: relative; }
+
+.home-glance .video-glance .btn-play { width: 5rem; height: 5rem; border-radius: 50px; position: absolute; top: 0; right: 0; left: 0; bottom: 0; margin: auto; background: url(../images/btn-video-play.svg) no-repeat center; background-size: contain; z-index: 5; transition: all .3s ease-in-out; }
+
+.home-glance .video-glance .btn-play:hover { -webkit-transform: scale(1.02); transform: scale(1.02); }
+
 .home-regis { padding: 7.5rem 0; background: #FFF; }
 
 .home-regis .regis-box { width: 100%; padding: 2.5rem 3.75rem 3.75rem; background: #FFF; border-radius: 30px; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); }
@@ -1263,7 +1273,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .about-desc article:not(:last-child) { margin-bottom: 3.75rem; }
 
-.about-desc .box-img { width: 100%; height: auto; max-height: 35.6875rem; }
+.about-desc .box-img { width: 100%; height: auto; }
 
 .about-desc .box-img img { border-radius: 20px; }
 
@@ -1293,7 +1303,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .about-committee .committee-cardblue h3 { font-family: "Montserrat Medium", sans-serif; font-weight: 500; display: inline-block; vertical-align: middle; color: #3B4676; margin-bottom: 0; text-transform: uppercase; }
 
-.about-committee .committee-cardblue ul { padding-left: 1.875rem; }
+.about-committee .committee-cardblue ul { list-style: none; padding-left: 1.875rem; }
 
 .about-committee .committee-cardblue ul li { position: relative; }
 
@@ -1313,7 +1323,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .about-contact .contact-card a { color: #727272; }
 
-.about-contact .contact-card ul { padding-left: 0; }
+.about-contact .contact-card ul { list-style: none; padding-left: 0; }
 
 .about-contact .contact-card ul li ul { padding-left: 3.5625rem; }
 
