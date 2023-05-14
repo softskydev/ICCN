@@ -1137,7 +1137,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-glance .glance-img { width: 100%; padding: 13.4% 0; position: relative; margin-bottom: 3.125rem; }
 
-.home-glance .glance-img img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; }
+.home-glance .glance-img img, .home-glance .glance-img video, .home-glance .glance-img iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; }
 
 .home-glance .glance-img:after { content: ""; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.15); }
 
@@ -1400,6 +1400,12 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 .login .box-login .title { font-size: 2.5rem; line-height: 3.125rem; margin-bottom: 1.25rem; }
 
 .login .box-login p { color: #727272; max-width: 365px; margin: 0 auto; }
+
+@media (max-width: 767px) { .login-wrap .col-md-6:not(:last-child) { margin-bottom: 2rem; }
+  .login-wrap .box-login { padding: 1.875rem; }
+  .login-wrap .box-login .icon { height: 2.5rem; margin-bottom: 1.25rem; }
+  .login-wrap .box-login .icon img { height: 2.5rem; }
+  .login-wrap .box-login .title { font-size: 2rem; line-height: 1.3; } }
 
 .auth { min-height: 100vh; background: #FFF; }
 
