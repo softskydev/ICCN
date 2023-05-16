@@ -137,7 +137,9 @@
                 <h2>AT A GLANCE OF ICCN 2024</h2>
               </div>
             </div>
-            <div class="glance-img video-glance"><img src="images/img-glance.png" alt="img"/><a class="btn-play" href="https://youtu.be/D0UnqGm_miA" data-lity="data-lity"></a></div>
+            <div class="glance-img video-glance">
+              <div class="player" id="yt-player"></div>
+            </div>
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -355,5 +357,28 @@
     <script src="plugins/lity/lity.js"></script>
     <script src="scripts/toc.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="https://www.youtube.com/player_api"></script>
+    <script>
+      // Replace 'VIDEO_ID' with the actual ID of the YouTube video
+      var videoId = 'pTOWDAE9Hx4';
+      
+      // This function will be called when the YouTube API is ready
+      function onYouTubePlayerAPIReady() {
+        // Create a new YouTube player
+        var player = new YT.Player('yt-player', {
+          videoId: videoId,
+          playerVars: { 'autoplay': 1 },
+          events: {
+            'onReady': onPlayerReady
+          }
+        });
+      }
+      
+      // This function will be called when the YouTube player is ready
+      function onPlayerReady(event) {
+        // Start playing the video automatically
+        event.target.playVideo();
+      }
+    </script>
   </body>
 </html>

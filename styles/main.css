@@ -1137,7 +1137,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .home-glance .glance-img { width: 100%; padding: 13.4% 0; position: relative; margin-bottom: 3.125rem; }
 
-.home-glance .glance-img img, .home-glance .glance-img video, .home-glance .glance-img iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; }
+.home-glance .glance-img img, .home-glance .glance-img video, .home-glance .glance-img iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; z-index: 3; }
 
 .home-glance .glance-img:after { content: ""; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.15); }
 
