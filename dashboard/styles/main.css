@@ -377,6 +377,24 @@ main { background: #EEEEEE; min-height: calc(100vh - 200px); width: 100%; margin
   .pagination .page-link.prev { margin-right: 15px; }
   .pagination .page-link.next { margin-left: 15px; } }
 
+.alert { position: relative; padding: 0.75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: 0.25rem; }
+
+.alert-dismissible { padding-right: 4rem; }
+
+.alert-dismissible .close { position: absolute; top: 0; right: 0; padding: 0.75rem 1.25rem; color: inherit; }
+
+.alert-primary { color: #004085; background-color: #cce5ff; border-color: #b8daff; }
+
+.alert-success { color: #155724; background-color: #d4edda; border-color: #c3e6cb; }
+
+.alert-warning { color: #856404; background-color: #fff3cd; border-color: #ffeeba; }
+
+.alert-danger { color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; }
+
+.alert .close { float: right; font-size: 1.5rem; font-weight: 700; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; opacity: .5; border: 0; background: transparent; }
+
+.alert .close:focus, .alert .close:hover, .alert .close:visited { outline: none; box-shadow: none; }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* Form */
 /* ------------------------------------------------------------------------------------------------ */
