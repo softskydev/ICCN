@@ -77,7 +77,23 @@
               <div class="content">
                 <div class="content__header">
                   <h2 class="content__title">Component</h2>
-                  <div class="content__action full"></div>
+                </div>
+                <div class="content__action full"><a class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalTest">Modal Test</a></div>
+              </div>
+              <div class="modal" id="modalTest" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-md modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5><a class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                      <button class="btn btn-primary" type="button">Save changes</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
