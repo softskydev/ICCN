@@ -333,6 +333,8 @@ main { background: #EEEEEE; min-height: calc(100vh - 200px); width: 100%; margin
   .cel-lg-9 { -ms-flex: 0 0 90%; -webkit-flex: 0 0 90%; flex: 0 0 90%; max-width: 90%; }
   .cel-lg-10 { -ms-flex: 0 0 100%; -webkit-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; } }
 
+ul.twocol, ol.twocol { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 1.25rem; -moz-column-gap: 1.25rem; column-gap: 1.25rem; }
+
 .btn { display: inline-block; font-weight: 500; color: #333333; text-align: center; vertical-align: middle; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: transparent; border: 1px solid transparent; padding: 10px 30px; font-size: 16px; line-height: 24px; border-radius: 30px; transition: all .3s ease-in-out; text-transform: uppercase; }
 
 .btn.btn-r10 { border-radius: 10px; }
@@ -389,7 +391,7 @@ main { background: #EEEEEE; min-height: calc(100vh - 200px); width: 100%; margin
 
 .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus, .show > .btn-light.dropdown-toggle:focus { box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 
-.btn-warning { color: #FFFFFF; background-color: #F3C044; border-color: #F3C044; }
+.btn-warning { color: #333333; background-color: #F3C044; border-color: #F3C044; font-family: "Roboto Medium", sans-serif; font-weight: 500; }
 
 .btn-warning:hover { color: #FFFFFF; background-color: #f1b82c; border-color: #f1b82c; }
 
@@ -405,11 +407,19 @@ main { background: #EEEEEE; min-height: calc(100vh - 200px); width: 100%; margin
 
 .btn-transparent:hover { color: #3B4676; }
 
+.btn-border { border: 1px solid #0083CB; color: #0083CB; background: #fff; }
+
+.btn-border:hover { background: #0083CB; color: #FFF; }
+
 .btn-next::after { content: ""; display: inline-block; vertical-align: middle; margin-left: 20px; width: 16px; height: 16px; background: url(../images/ic-next.svg) no-repeat; background-position: center; background-size: contain; }
 
 .btn-back::before { content: ""; display: inline-block; vertical-align: middle; margin-right: 20px; width: 16px; height: 16px; background: url(../images/ic-back.svg) no-repeat; background-position: center; background-size: contain; }
 
 .btn-add::before { content: ""; display: inline-block; vertical-align: middle; margin-right: 20px; width: 16px; height: 16px; background: url(../images/ic-add.svg) no-repeat; background-position: center; background-size: contain; }
+
+.content.full { margin-left: -25%; width: 125%; }
+
+@media (max-width: 991px) { .content.full { margin-left: 0; width: 100%; } }
 
 .badge { text-align: center; display: inline-block; white-space: nowrap; padding: 4px 15px; background: #CAD5E4; border-radius: 10px; color: #3B4676; font-family: "Roboto Medium", sans-serif; font-weight: 500; }
 
@@ -869,6 +879,60 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
 
 .content__programme .item__regis span { display: block; margin: 0 20px; font-size: 20px; line-height: 45px; font-family: "Montserrat Bold", sans-serif; font-weight: 700; }
 
+.content__payment .payment__detail { width: 100%; padding-bottom: 3.125rem; margin-bottom: 3.125rem; border-bottom: 1px solid #CDCDCD; }
+
+.content__payment .payment__detail .row:not(:last-child) { margin-bottom: 1.25rem; }
+
+.content__payment .payment__method h4 { margin-bottom: 1.875rem; }
+
+.content__payment .payment__method .method__list { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; gap: 10px; }
+
+.content__payment .payment__method .method__list .method__item { -webkit-flex: 0 0 calc(33.333% - 10px); -ms-flex: 0 0 calc(33.333% - 10px); flex: 0 0 calc(33.333% - 10px); max-width: calc(33.333% - 10px); padding: 1.25rem; background: #FFF; border: 1px solid #CDCDCD; border-radius: 10px; max-height: 68px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; transition: all .3s ease-in-out; }
+
+.content__payment .payment__method .method__list .method__item img { height: auto; max-height: 50px; }
+
+.content__payment .payment__method .method__list .method__item:hover, .content__payment .payment__method .method__list .method__item.active { box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.15); }
+
+.content__payment .payment__action { margin-top: 3.125rem; }
+
+.content__payment .ticket__type { padding: 1.25rem; background: #fff; border-radius: 20px; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-bottom: 30px; }
+
+.content__payment .bill__label { margin-bottom: 0; padding: 10px 20px; border: 1px solid rgba(204, 204, 204, 0.8); border-radius: 10px; line-height: 19px; margin-bottom: 1.25rem; }
+
+.content__payment .bill__detail li:not(:last-child) { margin-bottom: 10px; }
+
+.content__payment .bill__total .price { font-family: "Roboto Bold", sans-serif; font-weight: 700; text-align: center; font-size: 30px; line-height: 45px; }
+
+.content__payment .countdown { text-align: center; font-family: "Roboto Bold", sans-serif; font-weight: 700; color: #0083CB; margin-bottom: 16px; font-size: 30px; line-height: 45px; }
+
+.content__payment .dateline { text-align: center; margin-bottom: 2.125rem; }
+
+.content__payment .invoice__card { padding: 40px 50px; border: 1px solid #CDCDCD; border-radius: 20px; }
+
+.content__payment .invoice__card .card__title { padding-bottom: 1.875rem; margin-bottom: 1.875rem; border-bottom: 1px solid #CDCDCD; }
+
+.content__payment .invoice__card .card__detail { padding-bottom: 1.875rem; margin-bottom: 1.875rem; border-bottom: 1px solid #CDCDCD; }
+
+.content__payment .invoice__card .card__detail > .row:not(:last-child) { margin-bottom: 10px; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.content__myticket .myticket__detail { padding: 2.25rem 3.125rem; border: 1px solid #CDCDCD; border-radius: 20px; }
+
+.content__myticket .myticket__time { margin-bottom: 3.75rem; }
+
+.content__myticket .myticket__time span { display: block; margin-bottom: 0.875rem; }
+
+.content__myticket .myticket__time b { font-size: 1.875rem; line-height: 2.8125rem; color: #0083CB; }
+
+.content__myticket .details > .row:not(:last-child) { margin-bottom: 1.25rem; }
+
+.content__myticket .details .data { font-family: "Roboto Bold", sans-serif; font-weight: 700; }
+
+.content__myticket .details .data ul { margin-bottom: 0; }
+
+.content__myticket .qr-box { width: 100%; max-width: 17.6875rem; padding-top: 87.9%; position: relative; float: right; }
+
+.content__myticket .qr-box img { width: 100%; height: 100%; object-fit: contain; object-position: center; position: absolute; top: 0; left: 0; }
+
 @media (max-width: 1600px) and (min-width: 1300px) { .content { padding: 30px; } }
 
 @media (max-width: 991px) { .content { padding: 20px; }
@@ -933,5 +997,51 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
   .thank-you .image { margin: 0 0 20px; }
   .thank-you .image img { height: 80px; width: 80px; }
   .thank-you .large { font-size: 20px; line-height: 30px; } }
+
+.modal-eventdetail .close { position: absolute; top: 1.5rem; right: 1.5rem; z-index: 30; color: #0083CB; font-weight: normal; }
+
+.modal-eventdetail .modal-body { padding: 2.5rem; }
+
+.modal-eventdetail .modal-body .item__image { width: 100%; position: relative; padding-top: 53%; border-radius: 10px; overflow: hidden; }
+
+.modal-eventdetail .modal-body .item__image img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; }
+
+.modal-eventdetail .modal-body .item__title { font-size: 1.875rem; line-height: 2.25rem; font-family: "Roboto Bold", sans-serif; font-weight: 700; max-width: 25rem; margin-bottom: 1.875rem; }
+
+.modal-eventdetail .modal-body .item__detail { padding-top: 50px; }
+
+.modal-eventdetail .modal-body .item__detail .row:not(:last-child) { margin-bottom: 1.25rem; }
+
+.modal-eventdetail .modal-body .item__detail .title { font-family: "Roboto Bold", sans-serif; font-weight: 700; }
+
+.modal-eventdetail .modal-body .schedule { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: -5px; margin-bottom: 20px; }
+
+.modal-eventdetail .modal-body .schedule .item { background: #3B4676; border-radius: 10px; padding: 10px 20px; color: #FFF; margin: 5px; }
+
+.modal-eventdetail .modal-body .schedule .item__date, .modal-eventdetail .modal-body .schedule .item__time { padding-left: 30px; position: relative; }
+
+.modal-eventdetail .modal-body .schedule .item__date::before, .modal-eventdetail .modal-body .schedule .item__time::before { content: ""; display: block; width: 15px; height: 15px; position: absolute; top: 4px; left: 0; background-image: url(../images/ic-date-white.svg); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+.modal-eventdetail .modal-body .schedule .item__time::before { background-image: url(../images/ic-time-white.svg); }
+
+.modal-eventdetail .modal-body .location { padding: 10px 30px; background: #DDDDDD; color: #333; border-radius: 50px; }
+
+.modal-eventdetail .modal-body .location:before { content: ""; width: 1rem; height: 1rem; display: inline-block; vertical-align: middle; margin-right: 10px; background: url(../images/ic-mark.svg) no-repeat center; background-size: contain; }
+
+.modal-eventdetail .modal-footer { border-top: 0; }
+
+.modal-eventdetail .modal-footer.priceregis { padding: 3.125rem 0; text-align: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+
+.modal-eventdetail .modal-footer.priceregis .price { font-family: "Roboto Bold", sans-serif; font-weight: 700; padding-right: 1.25rem; }
+
+.modal-qr .modal-body { padding: 6.25rem; }
+
+.modal-qr .close { position: absolute; top: 1.5rem; right: 1.5rem; z-index: 30; color: #0083CB; font-weight: normal; }
+
+.modal-qr .qr-box { width: 100%; max-width: 16rem; padding-top: 42.799%; margin: 0 auto 1.875rem; position: relative; }
+
+.modal-qr .qr-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; }
+
+.modal-qr .text h2 { margin-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
