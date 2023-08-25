@@ -417,6 +417,18 @@ ul.twocol, ol.twocol { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-
 
 .btn-add::before { content: ""; display: inline-block; vertical-align: middle; margin-right: 20px; width: 16px; height: 16px; background: url(../images/ic-add.svg) no-repeat; background-position: center; background-size: contain; }
 
+.btn-block { display: block; }
+
+.btn-cart { padding: 11px 16px; background: #0083CB; }
+
+.btn-cart img { width: 22px; height: 22px; }
+
+.btn-groupcustom .btn + .btn { margin-left: 4px; }
+
+.btn-groupcustom .btn:first-child { border-radius: 50px 0 0 50px; }
+
+.btn-groupcustom .btn:last-child { border-radius: 0 50px 50px 0; }
+
 .content.full { margin-left: -25%; width: 125%; }
 
 @media (max-width: 991px) { .content.full { margin-left: 0; width: 100%; } }
@@ -933,6 +945,28 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
 
 .content__myticket .qr-box img { width: 100%; height: 100%; object-fit: contain; object-position: center; position: absolute; top: 0; left: 0; }
 
+.content__cart .cart-action { padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid #DDDDDD; }
+
+.content__cart .cart-action .removeSelected { color: #C23E3E; font-weight: 600; }
+
+.content__cart .cart-item { padding: 1rem 1.25rem; border: 1px solid #CDCDCD; border-radius: 20px; }
+
+.content__cart .cart-item:not(:last-child) { margin-bottom: 1rem; }
+
+.content__cart .cart-item .row { -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.content__cart .cart-item .item__image { width: 100%; padding-top: 72%; position: relative; }
+
+.content__cart .cart-item .item__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 10px; position: absolute; top: 0; left: 0; }
+
+.content__cart .cart-item .item__box { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; min-height: 7.5rem; }
+
+.content__cart .cart-item .item__title { font-size: 1.125rem; line-height: 1.3125rem; margin-bottom: 4px; }
+
+.content__cart .cart-item .item__price b { font-size: 1.125rem; line-height: 1.6875rem; padding-right: 8px; }
+
+.content__cart .cart-item .item__action .btn-link { padding-right: 1rem; color: #0083CB; }
+
 @media (max-width: 1600px) and (min-width: 1300px) { .content { padding: 30px; } }
 
 @media (max-width: 991px) { .content { padding: 20px; }
@@ -1030,9 +1064,11 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
 
 .modal-eventdetail .modal-footer { border-top: 0; }
 
-.modal-eventdetail .modal-footer.priceregis { padding: 3.125rem 0; text-align: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+.modal-eventdetail .modal-footer.priceregis { padding: 3.125rem 0; text-align: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
-.modal-eventdetail .modal-footer.priceregis .price { font-family: "Roboto Bold", sans-serif; font-weight: 700; padding-right: 1.25rem; }
+.modal-eventdetail .modal-footer.priceregis .box-price { margin-bottom: 1.25rem; }
+
+.modal-eventdetail .modal-footer.priceregis .price { font-family: "Roboto Bold", sans-serif; font-weight: 700; font-size: 1.875rem; line-height: 2.8125rem; }
 
 .modal-qr .modal-body { padding: 6.25rem; }
 
