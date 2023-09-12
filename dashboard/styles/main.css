@@ -443,6 +443,12 @@ ul.twocol, ol.twocol { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-
 
 .badge-secondary { color: #FFF; background: #3B4676; }
 
+.badge-completed { font-weight: 400; background: #C9FCCE; color: #333333; }
+
+.badge-waitingpayment { font-weight: 400; background: #F4E4D2; color: #333333; }
+
+.badge-canceled { font-weight: 400; background: #F4E4D2; color: #333333; }
+
 .pagination { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; list-style: none; padding: 0; margin: 0 auto; }
 
 .pagination .page-link { color: #0083CB; text-align: center; min-width: 40px; display: block; font-size: 16px; line-height: 20px; padding: 10px; border-radius: 8px; transition: all .3s ease; }
@@ -975,6 +981,78 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
 
 .content__cart .cart-item .item__action .btn-link { padding-right: 1rem; color: #0083CB; }
 
+.content__transaction .item { padding: 20px; border: 1px solid #CDCDCD; background: #FFF; border-radius: 20px; }
+
+.content__transaction .item:not(:last-child) { margin-bottom: 15px; }
+
+.content__transaction .item__image { width: 100%; padding-top: 85%; border-radius: 6px; position: relative; overflow: hidden; }
+
+.content__transaction .item__image img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; }
+
+.content__transaction .item__no { font-size: 14px; line-height: 1.5em; color: #333; margin-bottom: 14px; }
+
+.content__transaction .item__title { margin-bottom: 5px; }
+
+.content__transaction .item__title h4 { font-size: 18px; line-height: 1.5em; margin-bottom: 0; }
+
+.content__transaction .item__price { font-size: 18px; line-height: 1.5em; margin-bottom: 30px; }
+
+.content__transaction .item__totalprice { padding-top: 52px; margin-bottom: 10px; }
+
+.content__transaction .item__totalprice span { display: block; }
+
+.content__transaction .item__totalprice b { font-weight: 700; font-size: 18pxs; line-height: 1.5em; }
+
+.content__transaction .item .btn-wrap .btn { margin: 0; }
+
+.content__transaction .item .btn-wrap .btn-transaparent { color: #0083CB; }
+
+.content__intended .content__title { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; gap: 24px; margin-bottom: 32px; }
+
+.content__intended .content__title h2 { margin-bottom: 0; }
+
+.content__payment-method { padding: 30px; border: 1px solid #CDCDCD; background: #FFF; border-radius: 20px; }
+
+.content__payment-method .payment__logo { margin-bottom: 30px; }
+
+.content__payment-method .payment__logo img { height: 33px; }
+
+.content__payment-method .payment__detail .label { display: block; font-size: 18px; line-height: 1.5em; color: #333333; }
+
+.content__payment-method .payment__detail b { font-size: 18px; line-height: 1.5em; color: #333333; }
+
+.content__payment-notes { font-size: 14px; line-height: 1.5em; color: #FF0404; margin-top: 8px; max-width: 490px; margin-bottom: 30px; }
+
+.content__payment-order { background: #EEE; padding: 30px 40px; border-radius: 20px; }
+
+.content__payment-order .bill__total { text-align: left; }
+
+.content__payment-order .bill__total .price { text-align: left; }
+
+.content__transaction-detail .payment__detail { padding-bottom: 24px; margin-bottom: 24px; border-bottom: 0; }
+
+.content__transaction-detail .payment__logo { margin-top: 8px; height: 38px; }
+
+.content__transaction-detail .ticket__list > .item { padding: 20px; background: #FFF; border: 1px solid #CDCDCD; border-radius: 20px; }
+
+.content__transaction-detail .ticket__list > .item.canceled { background: #CDCDCD; }
+
+.content__transaction-detail .ticket__list > .item:not(:last-child) { margin-bottom: 16px; }
+
+.content__transaction-detail .ticket__list > .item .item__image { width: 100%; padding-top: 30%; position: relative; border-radius: 10px; overflow: hidden; }
+
+.content__transaction-detail .ticket__list > .item .item__image img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; }
+
+.content__transaction-detail .ticket__list > .item .item__title { margin-bottom: 20px; }
+
+.content__transaction-detail .ticket__list > .item .item__title h4 { margin-bottom: 0; }
+
+.content__transaction-detail .ticket__list > .item .item__right { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; gap: 20px; }
+
+.content__transaction-detail .ticket__list > .item .item__price { font-size: 18px; line-height: 1.5em; }
+
+.content__transaction-detail .ticket__list .schedule .item { background: transparent; padding: 0; margin: 0; display: -webkit-flex; display: -ms-flexbox; display: flex; border: 0; gap: 24px; }
+
 @media (max-width: 1600px) and (min-width: 1300px) { .content { padding: 30px; } }
 
 @media (max-width: 991px) { .content { padding: 20px; }
@@ -1026,6 +1104,18 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
   .content__programme .item__detail .title { padding: 10px 10px 5px; border: 0; }
   .content__programme .item__detail .desc { padding: 0 10px 10px; }
   .content__programme .item__regis { display: block; padding-top: 30px; } }
+
+.moreinfo { margin-top: 20px; }
+
+.moreinfo .ticket__type-list .ticket__type { padding: 20px; border-bottom: 1px solid #CDCDCD; margin-bottom: 10px; border-radius: 0; }
+
+.moreinfo .price.text-left { text-align: left; }
+
+.moreinfo .detail-sender h4 { margin-bottom: 8px; }
+
+.moreinfo .detail-sender .separator { width: 100%; height: 1px; background: #D6D6D6; margin: 40px 0; position: relative; }
+
+.moreinfo .detail-sender .separator:before { content: ""; width: 3rem; height: 3rem; background-color: #EEEEEE; background-image: url(../images/ic-paperline.png); background-repeat: no-repeat; background-size: contain; background-position: center; position: absolute; top: -1.5rem; left: 0; right: 0; margin: 0 auto; }
 
 .thank-you { text-align: center; background: #FFF; padding: 50px; border-radius: 20px; }
 
