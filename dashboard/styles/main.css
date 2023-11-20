@@ -717,6 +717,10 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
 
 .content { background: #FFF; padding: 30px 40px; border-radius: 20px; }
 
+.content.content-wmasthead { padding-top: 0; padding-left: 0; padding-right: 0; }
+
+.content.content-wmasthead .content__masthead { border-radius: 20px 20px 0 0; overflow: hidden; }
+
 .content .btn-wrap { margin: -5px; }
 
 .content .btn-wrap .btn { margin: 5px; }
@@ -725,11 +729,13 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
 
 .content .schedule .item { background: #FFF; border-radius: 10px; padding: 10px 20px; color: #0083CB; margin: 5px; }
 
-.content .schedule .item__date, .content .schedule .item__time { padding-left: 30px; position: relative; }
+.content .schedule .item__date, .content .schedule .item__time, .content .schedule .item__location { padding-left: 30px; position: relative; }
 
-.content .schedule .item__date::before, .content .schedule .item__time::before { content: ""; display: block; width: 15px; height: 15px; position: absolute; top: 4px; left: 0; background-image: url(../images/ic-date.svg); background-repeat: no-repeat; background-position: center; background-size: contain; }
+.content .schedule .item__date::before, .content .schedule .item__time::before, .content .schedule .item__location::before { content: ""; display: block; width: 15px; height: 15px; position: absolute; top: 4px; left: 0; background-image: url(../images/ic-date.svg); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
 .content .schedule .item__time::before { background-image: url(../images/ic-time.svg); }
+
+.content .schedule .item__location::before { background-image: url(../images/ic-mark.svg); }
 
 .content__header { margin: 0 0 50px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
@@ -1052,6 +1058,50 @@ hr.form-separator { border-top: 1px solid #333333; margin: 50px 0; }
 .content__transaction-detail .ticket__list > .item .item__price { font-size: 18px; line-height: 1.5em; }
 
 .content__transaction-detail .ticket__list .schedule .item { background: transparent; padding: 0; margin: 0; display: -webkit-flex; display: -ms-flexbox; display: flex; border: 0; gap: 24px; }
+
+.content__redeem { padding: 34px; padding-bottom: 0; min-height: 500px; }
+
+.content__redeem .form-group label { color: #333333; }
+
+.content__redeem .form-group.success { position: relative; }
+
+.content__redeem .form-group.success:after { content: ""; width: 25px; height: 25px; border-radius: 50px; background-image: url(../images/ic-checkmark-circle-green.svg); background-repeat: no-repeat; background-size: contain; position: absolute; top: 44px; right: 24px; }
+
+.content__redeem .form-group.fail { position: relative; }
+
+.content__redeem .form-group.fail:after { content: ""; width: 25px; height: 25px; border-radius: 50px; background-image: url(../images/ic-circle-cross-red.svg); background-repeat: no-repeat; background-size: contain; position: absolute; top: 44px; right: 24px; }
+
+.content__redeem .form-group .notif { font-size: 14px; font-weight: 700; line-height: 150%; margin-top: 4px; }
+
+.content__redeem .form-group .notif.success { color: #28C06E; }
+
+.content__redeem .form-group .notif.fail { color: #D44242; }
+
+.content__redeem .form-control { background: #EEEEEE; }
+
+.content__redeem .redeem__voucher { padding: 24px; border-radius: 20px; background: #EEEEEE; }
+
+.content__redeem .redeem__voucher .item__image { width: 100%; padding-top: 21.78%; position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+
+.content__redeem .redeem__voucher .item__image > img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
+
+.content__redeem .redeem__voucher .item__title { color: #333; font-size: 24px; font-weight: 700; line-height: 120%; text-transform: capitalize; margin-bottom: 24px; }
+
+.content__redeem .redeem__voucher .item__detail { margin-bottom: 24px; }
+
+.content__redeem .redeem__voucher .item__detail .row:not(:last-child) { margin-bottom: 10px; }
+
+.content__redeem .redeem__voucher .item__detail .title { color: #333; font-size: 16px; font-weight: 800; }
+
+.content__redeem .redeem__voucher .schedule { border-radius: 5px; background: #3B4676; margin-bottom: 24px; font-size: 14px; }
+
+.content__redeem .redeem__voucher .schedule .item { -webkit-flex: 0 0 calc(50% - 24px); -ms-flex: 0 0 calc(50% - 24px); flex: 0 0 calc(50% - 24px); max-width: 50%; background: transparent; color: #FFF; }
+
+.content__redeem .redeem__voucher .schedule .item__date::before { background-image: url(../images/ic-date-white.svg); }
+
+.content__redeem .redeem__voucher .schedule .item__time::before { background-image: url(../images/ic-time-white.svg); }
+
+.content__redeem .redeem__voucher .schedule .item__location::before { background-image: url(../images/ic-mark-white.svg); }
 
 @media (max-width: 1600px) and (min-width: 1300px) { .content { padding: 30px; } }
 
