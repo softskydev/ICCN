@@ -1,0 +1,45 @@
+//- Mixin Expan Collapse
+mixin hotelcard(data)
+  .hotel-list
+    each item, n in data
+      .hotel-card
+        .thumbnail
+          img(src=`images/hotel-thumbnail-${n + 1}.png`, alt="img")
+        .content
+          h3.name= item.nama
+          address=item.alamat
+          .info
+            b Estimated time arrival to venue:
+            ul
+              each estimate in item.estimates
+                li= estimate
+          .card-action
+            a.btn.btn-link(href=item.link target="_blank")=item.link
+            a.btn.btn-primary(href="#") SEE MORE
+
+mixin transportcard(data)
+  .transport-list
+    each item, n in data
+      .transport-card
+        .thumbnail
+          img(src=`images/transportation-thumbnail-${n + 1}.png`, alt="img")
+        .content
+          h3.name= item.nama
+          .desc
+            p=item.desc
+
+mixin destinationcard(data)
+  .destination-list
+    .row
+      each item, n in data
+        .col-lg-4.col-md-6
+          .destination-card
+            .thumbnail
+              img(src=`images/`+ item.img +`-${n + 1}.png`, alt="img")
+            .content
+              h3.name= item.nama
+              .desc
+                p=item.desc
+    .btn-wrap.text-center
+      a.btn.btn-primary.btn-long(href="#") SHOW MORE
+

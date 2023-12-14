@@ -1,0 +1,69 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "about";
+
+block content
+  .about
+    section.masthead-small
+      .masthead-bg(style="background-image: url(images/img-aboutifcn-masthead.png")
+      .masthead-text
+        .container
+          .row.justify-content-center
+            .col-lg-10
+              .row
+                .col-md-7
+                  h1 About IFCN
+                .col-md-5
+                  span.masthead-date 10 - 14 September 2024 / Jakarta
+
+    section.about-desc
+      .container
+        .row.justify-content-center
+          .col-lg-10
+            h2 INTERNATIONAL FEDERATION OF CLINICAL NEUROPHYSIOLOGY
+            article
+              p International Federation of Clinical Neurophysiology (IFCN) represents national and international sections of professional individuals and societies who share the desire to promote best practices in clinical neurophysiology through education and research throughout the world. 
+
+              p We facilitate collaboration, dialogue and understanding within our members and with other professionals passionate in clinical neurophysiology and the greater healthcare communities. We strive to unify healthcare communities to foster innovation, facilitate the exchange of knowledge, and promote best practices, while establishing guidelines to enhance clinical neurophysiology care to meet global needs.
+
+    section.about-chapoverview
+      .container
+        .row.justify-content-center
+          .col-lg-9
+            .section-title
+              h2 CHAPTER OVERVIEW
+
+            .box-img
+              img(src="images/img-map-overview.png", alt="img")
+            .box-legend
+              .item
+                .b-color(style="background: #FF892E;")
+                span Asia-Oceania <br>Chapter
+              .item
+                .b-color(style="background: #83B050;")
+                span Europe, Middle East & Africa <br>Chapter
+              .item
+                .b-color(style="background: #B30134;")
+                span Latin America <br>Chapter
+              .item
+                .b-color(style="background: #517CD3;")
+                span Northe America <br>Chapter
+        .row.justify-content-center
+          .col-lg-9
+            .row
+              .col-lg-4
+                .box-member
+                  h3 A Total of 62 societies in 58 countries with more than 20.000 members
+
+              .col-lg-8
+                article
+                  p.upper.big The Federation has four chapters which are the Asian-Oceania; the Europe, Middle East, and Africa Chapter; the Latin America; and the North America.
+                  p Within IFCN governance, each chapter has a representative on ExCo (or the Board of Directors). Most have their own committees and organize chapter meetings, usually held every four years between the international congresses of clinical neurophysiology. The chapters also have their own identities.
+                  p Chapters share a common goal, to preserve and to improve clinical neurophysiology in their national societies, though their roles differ. The NA Chapter serves two large countries, whereas the EMEAC includes 35 societies, the AOC includes 12, and the LAC includes 11. The development of clinical neurophysiology also differs widely between countries. Their work includes organizing scientific and educational meetings and supporting trainees and visiting professors. The IFCN supports the chapters financially in these activities.
+                a.btn.btn-primary.btn-long(href="https://www.ifcn.info/" target="_blank") READ MORE ABOUT IFCN
+
+
+
+
+

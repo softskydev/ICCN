@@ -1,0 +1,26 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "login";
+
+
+
+block content
+  .login(style="background: url(images/bg-login.png)")
+    .login-wrap
+      .container
+        .row.justify-content-center
+          .col-lg-5.col-md-6
+            //- a.box-login(href="create-account.html")
+            a.box-login(href="create-account-commingsoon.html")
+              .icon
+                img(src="images/ic-auth-create-account.svg", alt="icon")
+              h2.title CREATE ACCOUNT
+              p Don't have an account yet to take part in ICCN 2024? register yourself and enjoy the event
+          .col-lg-5.col-md-6
+            //- a.box-login(href="sign-in.html")
+            a.box-login(href="create-account-commingsoon")
+              .icon
+                img(src="images/ic-auth-sign-in.svg", alt="icon")
+              h2.title SIGN IN
+              p Already have an account? please log in to access the features in ICCN 2024

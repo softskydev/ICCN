@@ -1436,11 +1436,7 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .programme-atglance .rundown-event table { width: 100%; font-size: 18px; line-height: 27px; }
 
-.programme-atglance .rundown-event table th, .programme-atglance .rundown-event table td { width: calc(100% / 6); padding: 40px; color: #FFF; }
-
-.programme-atglance .rundown-event table th:first-child { border-radius: 20px 0 0 0; }
-
-.programme-atglance .rundown-event table th:last-child { border-radius: 0 20px 0 0; }
+.programme-atglance .rundown-event table th, .programme-atglance .rundown-event table td { width: calc(100% / 6); color: #FFF; }
 
 .programme-atglance .rundown-event table tr:last-child td:first-child { border-radius: 0 0 0 20px; }
 
@@ -1455,6 +1451,58 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 @media (max-width: 767px) { .programme-atglance .box-seemore { display: block; padding: 40px; }
   .programme-atglance .box-seemore h3 { line-height: 1.5em; margin-bottom: 20px; } }
+
+table.table:not(:last-child) { margin-bottom: 34px; }
+
+table.table thead tr:first-child th { font-family: "Montserrat Medium", sans-serif; font-weight: 500; font-weight: 700; }
+
+table.table thead tr:first-child th:first-child { border-radius: 20px 0 0 0; }
+
+table.table thead tr:first-child th:last-child { border-radius: 0 20px 0 0; text-align: right; }
+
+table.table th, table.table td { padding: 14px 24px; }
+
+table.table th:not(:last-child), table.table td:not(:last-child) { border-right: 1px solid #FFFFFF; }
+
+table.table td { min-height: 80px; font-weight: 600; }
+
+table.table.table-blue thead tr:first-child th { background: #3B4676; }
+
+table.table.table-blue thead tr:first-child th:not(:last-child) { border-right: 0; }
+
+table.table.table-blue thead th { background: #0083CB; }
+
+table.table.table-blue thead th:not(:last-child) { border-right: 1px solid #FFFFFF; }
+
+table.table.table-blue tbody tr:nth-child(odd) td { background: #FFF; }
+
+table.table.table-blue tbody tr:nth-child(even) td { background: #E5F6FF; }
+
+table.table.table-blue tbody tr:last-child td:first-child { border-radius: 0 0 0 20px; }
+
+table.table.table-blue tbody tr:last-child td:last-child { border-radius: 0 0 20px 0; }
+
+table.table.table-blue tbody tr td { color: #333333; }
+
+table.table.table-orange thead tr:first-child th { background: #FF9000; }
+
+table.table.table-orange thead tr:first-child th:not(:last-child) { border-right: 0; }
+
+table.table.table-orange thead th { background: #F0B014; }
+
+table.table.table-orange thead th:not(:last-child) { border-right: 1px solid #FFFFFF; }
+
+table.table.table-orange tbody tr:nth-child(odd) td { background: #FFF; }
+
+table.table.table-orange tbody tr:nth-child(even) td { background: #FDF7E7; }
+
+table.table.table-orange tbody tr:last-child td:first-child { border-radius: 0 0 0 20px; }
+
+table.table.table-orange tbody tr:last-child td:last-child { border-radius: 0 0 20px 0; }
+
+table.table.table-orange tbody tr.break td { background: #FCCFCF; }
+
+table.table.table-orange tbody tr td { color: #333333; }
 
 .login { min-height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
