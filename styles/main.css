@@ -1504,6 +1504,20 @@ table.table.table-orange tbody tr.break td { background: #FCCFCF; }
 
 table.table.table-orange tbody tr td { color: #333333; }
 
+.meeting-policies { padding: 7.5rem 0; }
+
+.meeting-policies h2 { font-size: 1.5rem; line-height: 2.75rem; font-family: "Montserrat Medium", sans-serif; font-weight: 500; margin-bottom: 1.25rem; color: #000000; text-transform: uppercase; }
+
+.meeting-policies .article-index { position: -webkit-sticky; position: sticky; top: 6.25rem; }
+
+.meeting-policies .article-index .item-index { padding: 10px 35px; background: #EEEEEE; text-align: center; }
+
+.meeting-policies .article-index .item-index:not(:last-child) { margin-bottom: 10px; }
+
+.meeting-policies .article-index .item-index a { color: #000; }
+
+.meeting-policies .article-index .item-index a:hover { text-decoration: none; }
+
 .login { min-height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 .login-wrap { width: 100%; height: 100vh; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
