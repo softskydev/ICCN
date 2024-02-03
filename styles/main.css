@@ -1726,6 +1726,52 @@ ol.boxgrey > li ul, ul.boxgrey > li ul { padding-left: 1.875rem; }
 
 .panel-group .panel-body .faq-vid .play { width: 80px; height: 80px; border-radius: 100px; background: url(../images/btn-video-play.svg) no-repeat; background-size: contain; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: 2; }
 
+.country-clas { padding: 120px 0; }
+
+.country-clas .col-lg-10.mb-60 { padding-bottom: 60px; }
+
+.country-clas .column-2 { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
+
+.country-clas .column-3 { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; }
+
+.country-clas .requirements-box:not(:last-child) { margin-bottom: 30px; }
+
+.country-clas .requirements-box h3 { color: #3B4676; }
+
+.country-clas ul[type="none"] { padding-left: 0; }
+
+.country-clas ul[type="disc"] { list-style: none; }
+
+.country-clas ul[type="disc"] li { position: relative; }
+
+.country-clas ul[type="disc"] li::before { content: ""; width: 4px; height: 4px; border-radius: 50px; background: #333; position: absolute; top: 11px; left: -16px; }
+
+.country-clas .cc-list { width: 100%; overflow: hidden; overflow-x: auto; margin-bottom: 30px; }
+
+.country-clas .cc-list table { width: 100%; font-size: 18px; line-height: 27px; }
+
+.country-clas .cc-list table tr:last-child td:first-child { border-radius: 0 0 0 20px; }
+
+.country-clas .cc-list table tr:first-child td:last-child[rowspan="2"] { border-radius: 0 0 20px 0; }
+
+.country-clas .cc-list table.table-lightblue .babyblue { background-color: #EFF9FF; }
+
+.country-clas .cc-list table.table-lightblue thead tr:first-child th { background: #0083CB; border-right: 1px solid #FFF; }
+
+.country-clas .cc-list table.table-lightblue thead tr:first-child th:first-child:last-child { border-radius: 20px 20px 0 0; }
+
+.country-clas .cc-list table.table-lightblue thead th { background: #0083CB; color: #FFF; border-right: 1px solid #FFFFFF; }
+
+.country-clas .cc-list table.table-lightblue thead th:last-child { text-align: left; }
+
+.country-clas .cc-list table.table-lightblue thead th.bluelight { background: #00A5FF; }
+
+.country-clas .cc-list table.table-lightblue td { vertical-align: top; color: #333333; font-family: "Montserrat Medium", sans-serif; font-weight: 500; }
+
+.country-clas .cc-list table.table-lightblue td:nth-child(odd) { background-color: #EFF9FF; }
+
+.country-clas .cc-list table.table-lightblue td p { margin-bottom: 24px; }
+
 .section.blog-content { padding-top: 60px; padding-bottom: 60px; background-color: #fff; overflow-x: hidden; }
 
 .section.blog-content .mb-20 { margin-bottom: 20px !important; }
