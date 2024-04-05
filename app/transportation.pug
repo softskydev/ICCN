@@ -1,0 +1,62 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "ta";
+  -
+    const transports = [
+      {
+      nama: "TAXI",
+      desc: "There are various fleets of taxi in Jakarta with unique and different colour schemes. However, you can recognize it by the word taxi printed at its roof. There are also various types of taxi based on the kind of vehicle (sedan or SUV type) with different prices; budget, regular, executive, and special taxis. Most of them will charge you using an argometer, a device to determine the transportation fee based on distance or time on the car.",
+      },
+      {
+      nama: "TRANSJAKARTA BUSWAY",
+      desc: "This is bus rapid transit system in Jakarta, Indonesia to provide a fast public transport system to help reduce rush hour traffic. The front seats are especially reserved for woman. You need to prepare an Indonesian e-money to use this type of transportation. In addition, please give attention to the route of the bus (there are more than 12!)",
+      },
+      {
+      nama: "JAKARTA MRT",
+      desc: "Jakarta Mass Rapid Transit or Jakarta MRT is a rapid transit system in Jakarta, the capital city of Indonesia. This mode of transportation is an alternative to lead you to another locations that is not covered by TransJakarta. You also need to prepare an Indonesian e-money to use this type of transportation.",
+      },
+      {
+      nama: "AIRWAY RAILINK STATION",
+      desc: "These trains are public transportation that may bring you from and to the Soekarno-Hatta. The airport railink in Jakarta takes about 40 minutes to reach the city center. Therefore, this may be the best way to avoid traffic jams in a crowded time in Jakarta. In addition, you may also enjoy the view of Jakarta along its track.",
+      },
+
+    ];
+
+block content
+  .travel
+    section.masthead-small
+      .masthead-bg(style="background-image: url(images/img-masthead-transport.png")
+      .masthead-text
+        .container
+          .row.justify-content-center
+            .col-lg-10
+              .row
+                .col-md-7
+                  h1 Transport in Jakarta
+                .col-md-5
+                  span.masthead-date 10 - 14 September 2024 / Jakarta
+
+    section.ta-content
+      .container
+        .row.justify-content-center
+          .col-lg-10
+            .section-title
+              h2 ENJOY YOUR TRIP IN JAKARTA!
+            .section-subtitle
+              h3 Tips to Avoid Traffic Jam in Jakarta
+              ul
+                li Jakarta is a vibrant and growing metropolitan city. Like some metropolitan cities, traffic may be a part of one’s daily routine, especially at the start and end of working hours during the weekdays. Therefore, feel free to explore the various modes of transport and we hope you have a pleasant stay in Jakarta.
+
+                li We advise all participants to purchase an Indonesian “E-money” card as a convenient method of payment in most public transport services, and can be easily available in most convenient stores, TransJakarta bus stops, MRT and train stations.
+
+            +transportcard(transports)
+
+
+
+
+
+
+
+
+

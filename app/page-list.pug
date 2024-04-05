@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      meta(name="description" content="")
+      meta(name="author" content="Nurmansyah")
+      meta(name="theme-color" content="")
+
+      title ICCN 2024
+
+      link(rel="icon" href="favicon.ico" sizes="32x32")
+      link(rel="icon" href="favicon.ico" sizes="192x192")
+      link(rel="apple-touch-icon" href="favicon.ico")
+      link(rel="stylesheet" href="plugins/bootstrap/reboot-grid.min.css")
+      link(rel="stylesheet" href="plugins/bootstrap/bootstrap-grid.min.css")
+      link(rel="stylesheet" href="styles/main.css")
+
+      style(type='text/css').
+        body {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 30px 0;
+          background: #EEEEEE;
+        }
+        #wrap {
+          width: 100%;
+        }
+        header {
+          padding: 60px 30px 30px;
+        }
+        .logo {
+          width: 180px;
+          margin: 0 auto 3rem;
+          display: block
+        }
+        .page-list-item {
+          margin-bottom: 40px;
+          display: flex;
+        }
+        .page-list-item.disabled{
+          color: #BDBDBD;
+          pointer-events: none;
+        }
+        .page-list-item.disabled a{
+          background: #EEE;
+        }
+        .page-list-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          padding: 10px 30px;
+          border-radius: 4px;
+          color: #555;
+          font-weight: 500;
+          text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          box-shadow: 0 0 3px 0 rgba(0,0,0,.25);
+          letter-spacing: 0;
+          transition: all 0.4s ease 0s;
+        }
+        .page-list-link:hover {
+          background: #0083CB;
+          color: #FFF;
+          letter-spacing: 2px;
+          -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.80);
+          -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.80);
+          box-shadow: 5px 40px -10px rgba(0,0,0,0.80);
+          transition: all 0.4s ease 0s;
+        }
+
+    body
+      #wrap
+        header
+          a.logo#logo(href="#" target="_blank")
+            img(src="images/iccn-logo-colored.png")
+        main
+          .container
+            .row.justify-content-center.page-list
+              .col-md-2.page-list-item
+                a.page-list-link(href="index.html" target="_blank")
+                  span Homepage
+              .col-md-2.page-list-item
+                a.page-list-link(href="about.html" target="_blank")
+                  span About
+              .col-md-2.page-list-item
+                a.page-list-link(href="about-commingsoon.html" target="_blank")
+                  span Comming Soon - About
+              .col-md-2.page-list-item
+                a.page-list-link(href="program-commingsoon.html" target="_blank")
+                  span Comming Soon - Program
+              .col-md-3.page-list-item
+                a.page-list-link(href="abstract.html" target="_blank")
+                  span Abstract
+              .col-md-3.page-list-item
+                a.page-list-link(href="abstract-categories.html" target="_blank")
+                  span Abstract - Categories
+              .col-md-3.page-list-item
+                a.page-list-link(href="login.html" target="_blank")
+                  span Login
+              .col-md-3.page-list-item
+                a.page-list-link(href="sign-in.html" target="_blank")
+                  span Sign In
+              .col-md-3.page-list-item
+                a.page-list-link(href="create-account.html" target="_blank")
+                  span Create Account
+              .col-md-3.page-list-item
+                a.page-list-link(href="create-account-indonesia.html" target="_blank")
+                  span Create Account - Indonesia
+              .col-md-3.page-list-item
+                a.page-list-link(href="create-account-overseas.html" target="_blank")
+                  span Create Account - Indonesia
+              //- .col-md-3.page-list-item
+              //-   a.page-list-link(href="about.html" target="_blank")
+              //-     span About
+              //- .col-md-3.page-list-item
+              //-   a.page-list-link(href="contact.html" target="_blank")
+              //-     span Contact Us
+              //- .col-md-3.page-list-item.disabled
+              //-   a.page-list-link(href="#" target="_blank")
+              //-     span 404 not found
+
+
+
+    block script
+      script(src="plugins/jquery-3.4.1.min.js")

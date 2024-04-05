@@ -1,0 +1,295 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "home";
+
+block content
+  .home
+    section.home-masthead
+      .masthead-bg(style="background-image: url(images/img-home-masthead.jpg)")
+        //- img(src="images/img-home-masthead.jpg", alt="masthead-bg")
+      .container
+        .row.justify-content-center
+          .col-lg-10
+            .masthead-content
+              .dateloc 10 - 14 September 2024 / Jakarta
+              h1 International Congress of <br>Clinical Neurophysiology
+              .countdown
+                .countdown-counter(id="countdownCounter" data-date="JUN 01, 2024 10:00:00")
+
+              a.btn.btn-primary(href="https://docs.google.com/forms/d/e/1FAIpQLSf_7w-Hrd7o4ZRhzFX2ATCNjzMtytMpUPEpulkdeiaOSwxsSA/viewform" target="_blank") REGISTER NOW
+    section.home-welcome
+      .container
+        .section-title
+          h2 WELCOME MESSAGE
+        .row.slider-md
+          .col-lg-4
+            .welcome-card
+              .profile
+                .pp
+                  img(src="images/photo-profile-3.png", alt="pp")
+                .pname
+                  b MANFALUTHY HAKIM, MD
+                  span Convenor of 33rd ICCN 2024
+              .welcome-text
+                p.text-ellipsis Dear Respected Colleagues. We are delighted to welcome you to the 33rd International Congress of Clinical Neurophysiology (ICCN) of the International Federation of Clinical Neurophysiology (IFCN). It is our honour and priviledge to host this prestigious conference, which will be held from 10th – 14th September, 2024, in Jakarta, Indonesia.
+                a.btn.btn-primary(href="#" data-toggle="modal" data-target="#modalWelcomeA") SHOW MORE
+
+              .profile-logo
+                img(src="images/iccn-logo-colored.png", alt="logo")
+          .col-lg-4
+            .welcome-card
+              .profile
+                .pp
+                  img(src="images/photo-profile-1.png", alt="pp")
+                .pname
+                  b PROF. JONATHAN COLE
+                  span President of International Federation of Clinical Neurophysiology (IFCN)
+              .welcome-text
+                p.text-ellipsis On behalf of the Executive Committee, IFCN, I am delighted to welcome you to our 33rd  International Congress which takes place in Jakarta. This is our first visit to Indonesia and reflects IFCN’s desire to spread excellence in our specialty as widely as we can.
+
+                a.btn.btn-primary(href="#" data-toggle="modal" data-target="#modalWelcomeB") SHOW MORE
+
+              .profile-logo
+                img(src="images/logo-international-federation.png", alt="logo")
+          .col-lg-4
+            .welcome-card
+              .profile
+                .pp
+                  img(src="images/photo-profile-2.png", alt="pp")
+                .pname
+                  b DODIK TUGASWORO PRAMUKARSO, MD, PH.D
+                  span Head of Indonesia Neurological Association
+              .welcome-text
+                p.text-ellipsis Dear distinguished colleagues. It is an honor for Indonesia, especially the Indonesian Neurological Association to take part hosting the 33rd ICCN in 2024. Indonesia is a vast beautiful country stretch more than 5,180km to be explored. Jakarta as the biggest city is the epicentral of education, science, research and development in the country. Nevertheless, Jakarta has many nice spots to be visit. I am sure ICCN 2024 will be a great time for you to have meetings, discussion, exchange experience and thoughts in a fine atmosphere of Jakarta. Therefore I am happy to meet you all in Jakarta.
+                a.btn.btn-primary(href="#" data-toggle="modal" data-target="#modalWelcomeC") SHOW MORE
+
+              .profile-logo
+                img(src="images/logo-indonesian-neurogical.png", alt="logo")
+
+    section.home-glance
+      .container
+        .section-title
+          h2 AT A GLANCE OF ICCN 2024
+      .glance-img.video-glance
+        //- img(src="images/img-glance.png", alt="img")https://www.youtube.com/watch?v=pTOWDAE9Hx4&ab_channel=ICCN2024
+        .player(id="yt-player")
+        //- a.btn-play(href="https://youtu.be/pTOWDAE9Hx4" data-lity)
+      .container
+        .row.justify-content-center
+          .col-lg-8
+            .glance-title
+              p The 33rd Internationl Congress of Clinical <br>Neurophysiology (ICCN) will be held in
+            .glance-dateloc
+              .item
+                .icon
+                  img(src="images/ic-mappin.svg", alt="icon")
+                span Jakarta, Indonesia
+              .item
+                .icon
+                  img(src="images/ic-calendar.svg", alt="icon")
+                span September 10 - 14, 2024
+            .glance-description
+              p There will be eight outstanding offline workshop and symposium. Registration and abstract submission will be open soon.
+
+    section.home-regis
+      .container
+        .section-title
+          h2 ICCN 2024 registration
+
+        .regis-box
+          h3.regis-title Registration Fees
+          .regis-desc
+            p The IFCN mission is to promote best practice in clinical neurophysiology through education and research throughout the world. And our vision is to improve healthcare worldwide by understanding the nervous system and optimizing the diagnosis and treatment of its disorders through clinical neurophysiology.
+          .regis-coups(style="background-image: url(images/bg-home-regis-coup.png)")
+            .coupon
+              h3 EARLY BIRD
+              .coupon-type
+                .icon
+                  img(src="images/ic-coupon.svg", alt="icon")
+                //- span -50% discount
+                span Cheaper Price
+            .coupon
+              h3 LATE BIRD
+              .coupon-type
+                .icon
+                  img(src="images/ic-coupon.svg", alt="icon")
+                //- span -25% discount
+                span Cheaper Price
+            .coupon
+              h3 REGULAR
+              .coupon-type
+                .icon
+                  img(src="images/ic-coupon.svg", alt="icon")
+                span NORMAL PRICE
+          a.btn.btn-primary.btn-long(href="login.html") REGISTER NOW
+
+    section.home-timeline
+      .container
+        .section-title
+          h2 TIMELINE EVENTS
+        .row.justify-content-center
+          .col-lg-11
+            .row
+              .col-lg-6
+                .timeline-card
+                  h3 Registration ICCN 2024
+                  ul
+                    li
+                      b Registration Opens
+                      span 1 June 2024
+                    li
+                      b Early Bird Discount
+                      span 1 June 2024
+                    li
+                      b Late Bird Discount
+                      span 1 June 2024
+                    li
+                      b Onsite Price
+                      span 1 June 2024
+                  .btn-wrap
+                    a.btn.btn-primary(href="login.html") REGISTER NOW
+                    a.btn.btn-primary.disabled(href="#") DOWNLOAD PDF
+              .col-lg-6
+                .timeline-card
+                  h3 Absract Submission
+                  ul
+                    li
+                      b Call for Abstracts Submission
+                      span 1 June 2024
+                    li
+                      b Abstract Submission Deadline
+                      span 1 June 2024
+                    //- li
+                    //-   b Extended Abstract Deadline
+                    //-   span 1 June 2024
+                    li
+                      b Abstract Acceptance Notification
+                      span 1 June 2024
+                  .btn-wrap
+                    a.btn.btn-primary(href="login.html") REGISTER NOW
+                    a.btn.btn-primary.disabled(href="#") DOWNLOAD PDF
+
+    section.home-sponsorship
+      .container
+        .section-title
+          h2 OUR SPONSORSHIP
+        .sponsor-logos.row
+          .col
+            img(src="images/iccn-logo-colored.png", alt="logo")
+          .col
+            img(src="images/logo-international-federation.png", alt="logo")
+          .col
+            img(src="images/logo-indonesian-neurogical.png", alt="logo")
+          .col
+            img(src="images/iccn-logo-colored.png", alt="logo")
+          .col
+            img(src="images/logo-international-federation.png", alt="logo")
+        .sponsor-logos.row
+          .col
+            img(src="images/logo-indonesian-neurogical.png", alt="logo")
+          .col
+            img(src="images/logo-international-federation.png", alt="logo")
+          .col
+            img(src="images/iccn-logo-colored.png", alt="logo")
+          .col
+            img(src="images/logo-international-federation.png", alt="logo")
+          .col
+            img(src="images/logo-indonesian-neurogical.png", alt="logo")
+
+block modal
+  .modal.modalWelcome(id="modalWelcomeA" tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .btn-close(href="#" data-dismiss="modal" aria-label="close")
+            img(src="images/ic-close-dark.png")
+
+        .modal-body
+          .welcome-card
+            .profile
+              .pp
+                img(src="images/photo-profile-3.png", alt="pp")
+              .pname
+                b MANFALUTHY HAKIM, MD
+                span Convenor of 33rd ICCN 2024
+            .welcome-text
+              p Dear Respected Colleagues. We are delighted to welcome you to the 33rd International Congress of Clinical Neurophysiology (ICCN) of the International Federation of Clinical Neurophysiology (IFCN). It is our honour and priviledge to host this prestigious conference, which will be held from 10th – 14th September, 2024, in Jakarta, Indonesia. 
+              p The ICCN presents you an engaging five-day programme comprised of the first two days of exciting workshops and three days of symposia, which will also be refreshed with interactive poster sessions. The committee has worked immensely to bring together this congress that highlights the latest updates in knowledge, technology and research from the most renowned clinical neurophysiologists globally. Recognizing the emerging interest in clinical neurophysiology from different countries with different phases of advancement, we strive to create a balance between advanced and fundamental topics discussed, that can be implemented to cultivate patient care in their respective regions.
+              p The congress venue will be held in the Balai Sidang Jakarta Convention Center (JCC) in the Senayan district in Jakarta, which marks as one of the most exciting and safe places in Jakarta, with great access to shopping centres, hotels and museums. Indonesia is known for its cultural heritage and beautiful landscape. Its hospitable people and tropical climate will mark a lasting experience. 
+              p We look forward to seeing you very soon!
+
+              p Manfaluthy Hakim <br>Convenor 33rd ICCN 2024
+
+
+            .profile-logo
+              img(src="images/iccn-logo-colored.png", alt="logo")
+
+  .modal.modalWelcome(id="modalWelcomeB" tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .btn-close(href="#" data-dismiss="modal" aria-label="close")
+            img(src="images/ic-close-dark.png")
+
+        .modal-body
+          .welcome-card
+            .profile
+              .pp
+                img(src="images/photo-profile-1.png", alt="pp")
+              .pname
+                b PROF. JONATHAN COLE
+                span President of International Federation of Clinical Neurophysiology (IFCN)
+            .welcome-text
+              p On behalf of the Executive Committee, IFCN, I am delighted to welcome you to our 33rd  International Congress which takes place in Jakarta. This is our first visit to Indonesia and reflects IFCN’s desire to spread excellence in our specialty as widely as we can.
+              p It has also been a real pleasure to work with our colleagues in the Indonesian Neurological Association to bring you such a fine congress we can. We hope to combine lectures, symposia and workshops reflecting the best of international research and practice in Clinical Neurophysiology whilst also allowing space and time for local and Asian interests as well.
+              p But no congress should be solely about work. There will also be an exciting social programme, allowing old friends and colleagues to renew acquaintances, and equally important, to enable our younger colleagues to get to know each other.
+              p Please join us for the best of international and local Clinical Neurophysiology, and to meet colleagues and make friends.
+              p With best wishes,<br> Jonathan Cole.
+
+
+            .profile-logo
+              img(src="images/logo-international-federation.png", alt="logo")
+
+  .modal.modalWelcome(id="modalWelcomeC" tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .btn-close(href="#" data-dismiss="modal" aria-label="close")
+            img(src="images/ic-close-dark.png")
+
+        .modal-body
+          .welcome-card
+              .profile
+                .pp
+                  img(src="images/photo-profile-2.png", alt="pp")
+                .pname
+                  b DODIK TUGASWORO PRAMUKARSO, MD, PH.D
+                  span Head of Indonesia Neurological Association
+              .welcome-text
+                p Dear distinguished colleagues. It is an honor for Indonesia, especially the Indonesian Neurological Association to take part hosting the 33rd ICCN in 2024. Indonesia is a vast beautiful country stretch more than 5,180km to be explored. Jakarta as the biggest city is the epicentral of education, science, research and development in the country. Nevertheless, Jakarta has many nice spots to be visit. I am sure ICCN 2024 will be a great time for you to have meetings, discussion, exchange experience and thoughts in a fine atmosphere of Jakarta. Therefore I am happy to meet you all in Jakarta.
+
+              .profile-logo
+                img(src="images/logo-indonesian-neurogical.png", alt="logo")
+
+
+block addscript
+  script(src="https://www.youtube.com/player_api")
+  script.
+    // Replace 'VIDEO_ID' with the actual ID of the YouTube video
+    var videoId = 'pTOWDAE9Hx4';
+
+    // This function will be called when the YouTube API is ready
+    function onYouTubePlayerAPIReady() {
+      // Create a new YouTube player
+      var player = new YT.Player('yt-player', {
+        videoId: videoId,
+        playerVars: { 'autoplay': 1 },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    // This function will be called when the YouTube player is ready
+    function onPlayerReady(event) {
+      // Start playing the video automatically
+      event.target.playVideo();
+    }

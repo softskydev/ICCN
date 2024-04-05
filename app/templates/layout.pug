@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      meta(name="description" content="")
+      meta(name="author" content="Libera")
+      meta(name="theme-color" content="")
+
+      title ICCN 2024
+
+      link(rel="icon" href="favicon.ico" sizes="32x32")
+      link(rel="icon" href="favicon.ico" sizes="192x192")
+      link(rel="apple-touch-icon" href="favicon.ico")
+      link(rel="stylesheet" href="styles/plugins.css")
+      link(rel="stylesheet" href="styles/main.css")
+
+  block vars
+
+  body
+    #wrap
+      block header
+        include header.pug
+
+      block mixin
+        include mixin.pug
+
+      main
+        block content
+
+      block footer
+        include footer.pug
+
+    block modal
+
+    block script
+      script(src="plugins/jquery-3.5.1.min.js")
+      script(src="plugins/bootstrap/bootstrap.bundle.min.js")
+      script(src="plugins/owl-carousel/owl.carousel.min.js")
+      script(src="plugins/bootstrap-select/bootstrap-select.min.js")
+      script(src="plugins/jquery.marquee/jquery.marquee.min.js")
+      script(src="plugins/lity/lity.js")
+      script(src="scripts/toc.js")
+      script(src="scripts/main.js")
+
+    block addscript

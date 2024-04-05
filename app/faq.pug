@@ -1,0 +1,90 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "faq";
+  -
+    var question = ["How can I register for this conference?", "How do I submit my abstract?", "How can I purchase a symposium or additional tickets?"]
+
+block content
+  .faq
+    section.masthead-small
+      .masthead-bg(style="background-image: url(images/masthead-faq.jpg)")
+      .masthead-text
+        .container
+          .row.justify-content-center
+            .col-lg-10
+              .row
+                .col-md-8
+                  h1 Frequently Asked Questions
+                .col-md-4
+                  span.masthead-date 10 - 14 September 2024 / Jakarta
+    section.faq-content
+      .container
+        .row.justify-content-center
+          .col-lg-8
+            .section-title
+              h2 HOW CAN WE HELP YOU?
+            .faq-search
+              form(action="#")
+                .form-group.inpt-search
+                  input.form-control(type="text" placeholder="Search by Keywords" )
+                button.btn.btn-primary(type="submit") SEARCH
+            .panel-group.faq-excol(id="op1" role='tablist' aria-multiselectable='false')
+              each q,i in question
+                .panel.panel-default
+                  .panel-heading(id=`heading-op${i}` role='tab')
+                    h4.panel-title
+                      a(role='button' data-toggle='collapse' data-parent=`#op1` href=`#opportunities-${i}` aria-controls="op1" class=i>0?'collapsed':'')
+                        b Q&nbsp; : &nbsp;
+                        span= q
+                  .panel-collapse.collapse(class=i==0?'show':'' id=`opportunities-${i}` role='tabpanel' aria-labelledby=`heading-op${i}` data-parent=`#op1`)
+                    .panel-body
+                      article
+                        p Visit the official conference website and choose the "Registration" option. There, you'll find a step-by-step guide to complete the registration process. Watch our tutorial video below for a more detailed visual guide.
+                      .faq-vid(style="background-image: url(images/thumbnail-video-faq.jpg)")
+                        a.play(href="https://youtu.be/pTOWDAE9Hx4" data-lity)
+
+    section.faq-form
+      .container
+        .row.justify-content-center
+          .col-lg-8
+            .box-auth.box-white
+              .text-center
+                h3 DIDN'T FIND WHAT YOU WERE LOOKING FOR? CONTACT US
+              .auth-form
+                form(action="#")
+                  .row
+                    .col-md-6
+                      .form-group
+                        input.form-control(type="text" placeholder="First Name*")
+                    .col-md-6
+                      .form-group
+                        input.form-control(type="text" placeholder="Last Name*")
+                  .form-group
+                    input.form-control(type="email" placeholder="Email*")
+                  .form-group
+                    input.form-control(type="text" placeholder="Subject Form*")
+                  .form-group
+                    select.select(title="Title*")
+                      option(value="") Optino 1
+                      option(value="") Optino 2
+                      option(value="") Optino 3
+                      option(value="") Optino 4
+                  .form-group
+                    select.select(title="Profession*")
+                      option(value="") Optino 1
+                      option(value="") Optino 2
+                      option(value="") Optino 3
+                      option(value="") Optino 4
+                  .form-group
+                    textarea.form-control( placeholder="Description Form*")
+                  .form-group.text-center
+                    button.btn.btn-primary.btn-med(type="submt") Submit
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "auth";
+
+block header
+  header.header.header-secondary#header
+    .container
+      .header-wrap
+        .header-left
+          .header-logo
+            a(href="/")
+              img(src="images/logi-iccn.png", alt="logo")
+              img.colored(src="images/iccn-logo-colored.png", alt="logo")
+        .header-right
+          nav.header-nav
+            .nav-item(class=activepage =="home"? "active":"")
+              a(href="/") HOME
+            .nav-item.has-sub(class=activepage =="about"? "active":"")
+              a(href="#") ABOUT
+              .sub-menu
+                .nav-item(class=activesubpage =="about-iccn"? "active":"")
+                  a(href="about-new.html") ICCN
+                .nav-item(class=activesubpage =="about-ifcn"? "active":"")
+                  a(href="about-ifcn.html" ) IFCN
+                .nav-item( class=activesubpage =="about-ina"? "active":"")
+                  a(href="about-ina.html") Indonesian Neurolgical Association
+            .nav-item.has-sub(class=activepage =="programme"? "active":"")
+              a(href="#") PROGRAMME
+              .sub-menu
+                .nav-item(class=activesubpage =="programme"? "active":"")
+                  a(href="program-commingsoon.html" ) Programme At Glance
+                .nav-item.disabled(class=activesubpage =="programme"? "active":"")
+                  a(href="#" ) Full Program
+                .nav-item.disabled(class=activesubpage =="programme"? "active":"")
+                  a(href="#") Speakers of ICCN
+            .nav-item.has-sub
+              a(href="login.html") REGISTRATION
+              .sub-menu
+                .nav-item.disabled(class=activesubpage =="reg-fee"? "active":"")
+                  a(href="#") Registration Fee
+                .nav-item(class=activesubpage =="reg-page"? "active":"")
+                  a(href="login.html") Registration Page
+            .nav-item.has-sub
+              a(href="abstract.html") ABSTRACT & SUBMISSION
+              .sub-menu
+                .nav-item.disabled(class=activepage =="ab-aubmission"? "active":"")
+                  a(href="#" ) Abstract Submission Guideline
+                .nav-item(class=activepage =="ab-cate"? "active":"")
+                  a(href="abstract-categories.html" ) Abstract Categories
+                .nav-item.disabled(class=activepage =="ab-poster"? "active":"")
+                  a(href="#" ) Poster Format
+                .nav-item.disabled(class=activepage =="ab-travel"? "active":"")
+                  a(href="#" ) Travel Grants
+            .nav-item.has-sub
+              a(href="#") TRAVEL & ACCOMODATION
+              .sub-menu
+                .nav-item.disabled(class=activepage =="travel"? "active":"")
+                  a(href="#") Destination in Jakarta
+                .nav-item.disabled(class=activepage =="travel"? "active":"")
+                  a(href="#") Hotel
+                .nav-item.disabled(class=activepage =="travel"? "active":"")
+                  a(href="#") Transportation
+            .nav-item.disabled(class=activepage =="faq"? "active":"")
+              a(href="#") FAQ
+            //- .nav-item.disabled(class=activepage =="profile"? "active":"")
+            //-   a(href="#") PROFILE
+        .burger-menu
+          span
+          span
+          span
+
+block content
+  .auth
+    .signin
+      .container
+        .row.justify-content-center
+          .col-lg-10
+            .box-auth
+              .section-title
+                h1 SIGN IN
+                p Please login using the valid username and password that you have received during the sign-up.
+              .auth-form
+                form(action="#")
+                  .form-group
+                    input.form-control(type="email" placeholder="Email Address*")
+                  .form-group
+                    input.form-control(type="password" placeholder="Password*")
+                  .form-action.text-center
+                    button.btn.btn-primary.btn-med(type="submt") LOGIN
+                    .keeplogin
+                      .custom-control.custom-checkbox
+                        input.custom-control-input(id="chk-keep-sign" type="checkbox" name="chk-keep-sign")
+                        label.custom-control-label(for="chk-keep-sign") Keep me signed in
+              .alredy
+                a.btn.btn-link(href="#") FORGOT YOUR PASSWORD?
+
+
+
+

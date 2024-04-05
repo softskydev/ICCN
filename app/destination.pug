@@ -1,0 +1,122 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "ta";
+  -
+    const explores = [
+      {
+      img: "thumbnail-destination",
+      nama: "LAPANGAN BANTENG PARK",
+      desc: "Located in Central Jakarta, this is one of the favorite open spaces to spend their weekends or just to chat enjoying the sunset. The specialty of this park is the dancing water show which can be watched every weekend evening.",
+      },
+      {
+      img: "thumbnail-destination",
+      nama: "SETU BABAKAN",
+      desc: "This is a 289-hectare Betawi Cultural Village. There are daily traditional activities of the Betawi people including ngederes, silat Beksi (Betawi 'kungfu'), wedding parties, akekah, and cooking Betawi's traditional food. Every weekend, there is Betawi art performance at the Amphitheater.",
+      },
+      {
+      img: "thumbnail-destination",
+      nama: "HUTAN KOTA GELORA BUNG KARNO (GBK)",
+      desc: "This is a multifunction outdoor green area of 14,711 m² in the heart of Jakarta. It has  a great view with arrays of sports field, restaurants, and picnic area. Citizens may relax, gather, or perform sports such as running.",
+      },
+      {
+      img: "thumbnail-destination",
+      nama: "National Monument (Monas)",
+      desc: "This is a 433-feet 80-hectare building with a huge fire-shaped gold on its top that represents the spirit of Indonesia. It has reliefs of the History of Indonesia during pre-independence days. On its top, there are also telescopes to view the scenery of Jakarta from above.",
+      },
+      {
+      img: "thumbnail-destination",
+      nama: "JAKARTA HISTORY MUSEUM",
+      desc: "This neoclassical style building is one of the most favorite museums in Jakarta and has become an icon for the Old Town Area. This museum was the City Hall Building in the era of the VOC (Vereenigde Oost Indische Compagnie) government. There are approximately 23,500 collections of items in the form of original or replicas.",
+      },
+      {
+      img: "thumbnail-destination",
+      nama: "THE THOUSAND ISLAND (PULAU SERIBU)",
+      desc: "The Thousand Islands are a string of 342 islands with a total length of 45km at the north of Jakarta's coast. There were 'The Island of Angel' (Pulau Bidadari) to enjoy watersport and view the floating fisherman's village, Anyer Island to enjoy viewing Papua traditional house (Honai), Tidung Island to snorkle and viewing mangrove forest, etc.",
+      },
+    ];
+    const tastes = [
+      {
+      img: "thumbnail-taste",
+      nama: "GADO GADO",
+      desc: "This is an Indonesian 'salad' which consists of raw, slightly boiled, blanched or steamed vegetables, hard-boiled eggs, boiled potato, fried tofu, tempeh, and lontong, then it is served with a peanut sauce dressing.",
+      },
+      {
+      img: "thumbnail-taste",
+      nama: "ULAM RICE",
+      desc: "Nasi Ulam (Ulam Rice) is a traditional Betawi culinary that is also influenced from Chinese culinary culture. It is rice sprinkled with potato stew / stew / tofu eggs, with the additional ingredients of fried salted squid, fried rice noodles, sliced omelet, and potato cakes. It is a little bit difficult to be found nowadays.",
+      },
+      {
+      img: "thumbnail-taste",
+      nama: "ES SELENDANG MAYANG",
+      desc: "This is a soft-like pudding made from sago palm flour, which is doused with a brown sugar, coconut milk, and ice cubes. As an ice dish, selendang mayang ice has a distinctive sweet, soft and savory taste because it uses coconut milk.",
+      },
+      {
+      img: "thumbnail-taste",
+      nama: "SOTO BETAWI",
+      desc: "This is a traditional 'meat soup' of Betawi that is slowly cooked in a coconut milk broth and enriched with various spices, Soto Betawi is best served hot with steamed rice and emping (melinjo) crackers.",
+      },
+      {
+      img: "thumbnail-taste",
+      nama: "KERAK TELOR",
+      desc: "This is a Betawi traditional spicy omelette dish which is made from egg cooked with glutinous rice cooked and served with serundeng, fried shallots and dried shrimp as topping",
+      },
+      {
+      img: "thumbnail-taste",
+      nama: "BIR PLETOK",
+      desc: "This is a non-alcoholic Indonesian drink of the Betawi people in Jakarta, Indonesia. It is made from several spices, including ginger, pandan leaves, boiled sappan wood, and lemongrass.",
+      },
+    ];
+
+block content
+  .travel
+    section.masthead-small
+      .masthead-bg(style="background-image: url(images/img-masthead-hotels.png")
+      .masthead-text
+        .container
+          .row.justify-content-center
+            .col-lg-10
+              .row
+                .col-md-7
+                  h1 Destination in Jakarta
+                .col-md-5
+                  span.masthead-date 10 - 14 September 2024 / Jakarta
+
+    section.ta-content
+      .container
+        .row.justify-content-center
+          .col-lg-10
+            .destination-top
+              .section-subtitle
+                h3 ICCN 2024 VENUE <br>JAKARTA CONVENTION CENTER
+                p Balai Sidang Jakarta Convention Center is at the gateway to the commercial and entertainment district of Senayan in Jakarta. Distance from Airport (Soekarno – Hatta) to Balai Sidang Jakarta Convention Center (Senayan Gelora Bung Karno Area) 16 miles around 45 – 60 minutes by taxi.
+                .row
+                  .col-md-4
+                    img(src="images/img-destination-1.png", alt="img")
+                  .col-md-4
+                    img(src="images/img-destination-2.png", alt="img")
+                  .col-md-4
+                    img(src="images/img-destination-3.png", alt="img")
+
+    section.ta-content.explore-jakarta
+      .container
+        .section-title
+          h2 EXPLORE JAKARTA, INDONESIA
+
+        +destinationcard(explores)
+
+    section.ta-content
+      .container
+        .section-title
+          h2 Thousand Taste of Jakarta, indonesia
+
+        +destinationcard(tastes)
+
+
+
+
+
+
+
+
+

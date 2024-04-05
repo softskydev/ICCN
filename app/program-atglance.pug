@@ -1,0 +1,52 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "programme";
+
+block content
+  .about
+    section.masthead-small
+      .masthead-bg(style="background-image: url(images/img-masthead-programme.png)")
+      .masthead-text
+        .container
+          .row.justify-content-center
+            .col-lg-10
+              .row
+                .col-md-6
+                  h1 Programme at Glance
+                .col-md-6
+                  span.masthead-date 10 - 14 September 2024 / Jakarta
+
+    section.programme-atglance
+      .container
+        .row.justify-content-center
+          .col-lg-10
+            .section-heading
+              h2 ICCN 2024 : PROGRAMME AT GLANCE
+              p Welcome to ICCN 2024, an Event designed to enrich the experience and knowledge in Clinical Neurophysiology. This event is designed to increase skills and knowledge as well as provide new experiences in the field of clinical neurophysiology. With various topics will be presented, the workshop will provide various themes with a wide range of practical skills in clinical neurophysiology and symposium will provide a comprehensive view of the latest developments in various related fields.
+            .rundown-event
+              table.table
+                thead
+                  tr
+                    th(style="background:#3B4676") EVENT SCHEDULE
+                    th(style="background:#0083CB") Tuesday, September 10th, 2023
+                    th(style="background:#0083CB") Wednesday, September 11th, 2023
+                    th(style="background:#0083CB") Wednesday, September 12th, 2023
+                    th(style="background:#0083CB") Friday, September 13th, 2023
+                    th(style="background:#0083CB") Saturday, September 14th, 2023
+                tbody
+                  tr
+                    td(style="background:#6673B2") MORNING
+                    td(rowspan="2" style="background:#F0B014") ICCN Workshop
+                    td(rowspan="2" style="background:#F0B014") ICCN Symposium Day 1
+                    td(rowspan="2" style="background:#FF9000") ICCN Symposium Day 2
+                    td(rowspan="2" style="background:#FF9000") ICCN Symposium Day 3
+                    td(rowspan="2" style="background:#FF9000") ICCN Symposium Day 4
+                  tr
+                    td(style="background:#6673B2") EVENING
+
+          .col-lg-7
+            .box-seemore
+              h3 SEE MORE PROGRAMME AT ICCN 2024
+              a.btn.btn-primary.btn-long(href="#") SEE MORE PROGRAMME
+
