@@ -1430,6 +1430,10 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 .programme-atglance .section-heading h2 { font-size: 24px; line-height: 148%; font-family: "Montserrat Medium", sans-serif; font-weight: 500; margin-bottom: 20px; }
 
+.programme-atglance .section-heading h2.w-border { padding: 0 50px; border: 1px solid #0083CB; color: #0083CB; text-transform: uppercase; display: inline-block; border-radius: 50px; }
+
+.programme-atglance .section-heading h2.w-border:last-child { margin-bottom: 0; }
+
 .programme-atglance .section-heading p { font-size: 16px; line-height: 148%; }
 
 .programme-atglance .rundown-event { margin-bottom: 50px; }
@@ -1451,6 +1455,116 @@ textarea.form-control, .form-contact .wpforms-form .wpforms-field textarea.wpfor
 
 @media (max-width: 767px) { .programme-atglance .box-seemore { display: block; padding: 40px; }
   .programme-atglance .box-seemore h3 { line-height: 1.5em; margin-bottom: 20px; } }
+
+.block-dd { background: #EEEEEE; padding: 60px 0; }
+
+.programDD-group { padding-bottom: 60px; }
+
+.programDD-group:not(:last-child) { margin-bottom: 60px; }
+
+.programDD-group .panel-group > hr { border-top: 3px solid #CDCDCD; margin-bottom: 60px; }
+
+.programDD-group .panel { background: #fff; padding: 32px 50px; border: 1px solid #0083CB; border-radius: 30px; }
+
+.programDD-group .panel .panel-heading { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.programDD-group .panel .panel-heading p { -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+
+.programDD-group .panel .panel-heading .datetime span { display: block; text-align: right; }
+
+.programDD-group .panel .panel-heading .datetime .date { font-size: 20px; line-height: 1.5em; font-family: "Montserrat Semibold", sans-serif; font-weight: 600; color: #3B4676; }
+
+.programDD-group .panel .panel-heading .datetime .time { font-size: 18px; line-height: 1.5em; font-family: "Montserrat Medium", sans-serif; font-weight: 500; color: #3B4676; }
+
+.programDD-group .panel .panel-title a { max-width: 609px; padding: 0 50px; border-radius: 50px; border: 1px solid #0083CB; }
+
+.programDD-group .panel .panel-title a:hover, .programDD-group .panel .panel-title a:not(.collapsed) { background: #CEE8F7; }
+
+.programDD-group .panel .panel-title a { color: #0083CB; font-family: "Montserrat Medium", sans-serif; font-weight: 500; }
+
+.programDD-group .panel .panel-title a:after { display: none; }
+
+.programDD-group .panel-body .table.table-orange { width: 100%; }
+
+.programDD-group .panel-body .table.table-orange th { color: #FFF; text-transform: uppercase; }
+
+.programDD-group .panel-body .table.table-orange th:not(:last-child) { border-right: 1px solid #FFF; }
+
+.programDD-group .panel-body .table.table-orange th:last-child { text-align: left; }
+
+.block-symposia { padding: 60px 0; }
+
+.block-symposia .glance-title { font-size: 24px; line-height: 1.5em; color: #000; margin-bottom: 24px; }
+
+.block-symposia .symposia-list { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; gap: 14px; }
+
+.block-symposia .symposia-list .symposia-item { padding: 0 34px; border: 1px solid #0083CB; border-radius: 50px; color: #0083CB; font-family: "Roboto", sans-serif; font-weight: 400; font-size: 20px; line-height: 1.2em; }
+
+.plenary-speakers { padding: 40px 0 100px; }
+
+.plenary-speakers .speakers-card { padding: 34px 24px; background: #FFF; border-radius: 30px; box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1); }
+
+.plenary-speakers .speakers-card .photo { max-width: 400px; max-height: 393px; margin-bottom: 24px; }
+
+.plenary-speakers .speakers-card .photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+.plenary-speakers .speakers-card .name-title { text-align: center; }
+
+.plenary-speakers .speakers-card .name-title .name { font-size: 24px; line-height: 1.5em; color: #000; margin-bottom: 8px; font-family: "Montserrat Medium", sans-serif; font-weight: 500; text-transform: uppercase; }
+
+.plenary-speakers .speakers-card .name-title .title { font-style: italic; font-size: 18px; line-height: 1.5em; color: #000000; }
+
+.plenary-speakers .speakers-card hr { margin: 40px 0 24px; border-top: 3px solid #CDCDCD; }
+
+.plenary-speakers .speakers-card .topic { text-align: center; color: #000; font-size: 20px; line-height: 1.5em; margin-bottom: 24px; }
+
+.plenary-speakers .speakers-card .topic b { display: block; }
+
+.plenary-speakers .speakers-card .country { width: 152px; height: 152px; margin: 0 auto; }
+
+.plenary-speakers .speakers-card .country img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+.sessionDD { padding-bottom: 120px; }
+
+.sessionDD .panel { background: #EEEEEE; padding: 25px 50px; border: 1px solid #BABABA; border-radius: 30px; }
+
+.sessionDD .panel .panel-heading { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.sessionDD .panel .panel-heading p { -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; }
+
+.sessionDD .panel .panel-heading .datetime span { display: block; text-align: right; }
+
+.sessionDD .panel .panel-heading .datetime .date { font-size: 20px; line-height: 1.5em; font-family: "Montserrat Semibold", sans-serif; font-weight: 600; color: #3B4676; }
+
+.sessionDD .panel .panel-heading .datetime .time { font-size: 18px; line-height: 1.5em; font-family: "Montserrat Medium", sans-serif; font-weight: 500; color: #3B4676; }
+
+.sessionDD .panel .panel-title a { max-width: 689px; padding: 0 50px; border-radius: 50px; border: 1px solid #3B4676; }
+
+.sessionDD .panel .panel-title a:hover, .sessionDD .panel .panel-title a:not(.collapsed) { background: #0083CB; border-color: #0083CB; color: #FFF; }
+
+.sessionDD .panel .panel-title a { color: #3B4676; font-family: "Montserrat Medium", sans-serif; font-weight: 500; }
+
+.sessionDD .panel .panel-title a:after { display: none; }
+
+.sessionDD .panel-group .panel-default { padding-bottom: 24px !important; }
+
+.sessionDD .panel-group .panel-default:not(:last-child) { margin-bottom: 24px; }
+
+.sessionDD .panel-default { border-bottom: 1px solid #BABABA !important; }
+
+.sessionDD .panel-body ul { list-style: none; padding-left: 0; }
+
+.sessionDD .panel-body ul.doublelist { -webkit-columns: 2; -moz-columns: 2; columns: 2; -webkit-column-gap: 50px; -moz-column-gap: 50px; column-gap: 50px; }
+
+.sessionDD .panel-body ul.doublelist li { -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid-column; }
+
+.sessionDD .panel-body ul li { padding: 10px 14px; background: #FFF; border-radius: 10px; color: #000; border-bottom: 1px solid #BABABA; }
+
+.sessionDD .panel-body ul li span { display: block; }
+
+.sessionDD .panel-body ul li span.topic { text-transform: uppercase; font-size: 18px; line-height: 1.5em; }
+
+.sessionDD .panel-body ul li span.speaker { font-size: 16px; line-height: 1.5em; }
 
 table.table:not(:last-child) { margin-bottom: 34px; }
 
